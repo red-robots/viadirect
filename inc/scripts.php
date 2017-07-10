@@ -14,16 +14,22 @@ function acstarter_scripts() {
 	wp_enqueue_script( 
 			'acstarter-blocks', 
 			get_template_directory_uri() . '/assets/js/vendors.js', 
-			array(), '20120206', 
+			array('jquery'), '20120206', 
 			true 
 		);
 
 	wp_enqueue_script( 
 			'acstarter-custom', 
 			get_template_directory_uri() . '/assets/js/custom.js', 
-			array(), '20120206', 
+			array('jquery','acstarter-blocks'), '20120206', 
 			true 
 		);
+	wp_enqueue_script( 
+		'font-awesome', 
+		'https://use.fontawesome.com/4945cee666.js', 
+		array('jquery','acstarter-blocks','acstarter-custom'), '20170710', 
+		true 
+	);
 
 	// wp_enqueue_script( 
 	// 		'acstarter-flexslider', 
