@@ -70,36 +70,184 @@
   }
 }
 #masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  background-color: rgba(255,255,255,0.8);
+  max-height: 100vh;
+  overflow-y: auto;
+  @include flexbox();
+  @include flexbox-direction(column);
+  @include flexbox-align-content(flex-start);
+  @include flexbox-align-items(flex-start);
+  @include flexbox-justify(flex-start);
+  @media screen and (min-width: $tabwidth){
+    padding: 10px 3% 20px 3%;
+  }
   >.row-1 {
+    width: 100%;
+    order: 2;
+    margin: 0;
+    display: none;
+    @include flexbox-flex(0,0,auto);
+    &.toggled {
+      display: block;
+    }
+    @media screen and (min-width: $tabwidth){
+      order: 1;
+      display: block;
+      margin: 0 0 20px 0;
+    }
     ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      @media screen and (min-width: $tabwidth){
+        text-align: right;
+      }
       li {
+        display: block;
+        margin: 10px 0;
+        list-style-type: none;
+        &:first-child {
+          margin: 0 0 10px 0;
+        }
+        @media screen and (min-width: $tabwidth){
+          display: inline-block;
+          margin: 0 5px;
+          &:first-child {
+            margin: 0 5px;
+          }
+        }
         a {
-
+          text-decoration: none;
+          color: $color__via-grey;
+          font-size: 16px;
+          @media screen and (min-width: $tabwidth){
+            font-size: 14px;
+          }
+          &:hover {
+            color: $color__via-red;
+          }
         }
       }
     }
   }
   >.row-2 {
+    width: 100%;
+    @include flexbox-flex(0,0,auto);
+    @include flexbox();
+    @include flexbox-direction(column);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-justify(center);
+    order: 1;
+    @media screen and (min-width: $tabwidth){
+      @include flexbox-align-content(flex-end);
+      @include flexbox-align-items(flex-end);
+      @include flexbox-direction(row);
+      @include flexbox-justify(space-between);
+      order: 2;
+    }
     .logo {
+      margin: 0;
+      width: 80%;
+      order: 1;
+      @media screen and (min-width: $tabwidth){
+        margin: 0;
+        width: 20%;
+        min-width: 200px;
+      }
       a {
+        display: block;
         img {
-
+          display: block;
+          width: 100%;
         }
       }
     }
     #site-navigation {
-      button {
-
+      text-align: center;
+      width: 100%;
+      order: 3;
+      @media screen and (min-width: $tabwidth){
+        order: 2;
       }
-      ul {
-        li {
-
+      &.toggled {
+        .menu-primary-container {
+          display: block;
+        }
+      }
+      button {
+        display: inline-block;
+        margin: 10px 0;
+        box-shadow: none;
+        text-shadow: none;
+        background-color: $color__via-red;
+        color: white;
+        border: none;
+        border-radius: 0;
+        font-size: 18px;
+        @media screen and (min-width: $tabwidth){
+          display: none;
+        }
+      }
+      .menu-primary-container {
+        display: none;
+        @media screen and (min-width: $tabwidth){
+          display: block;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          li {
+            list-style-type: none;
+            margin: 10px 0;
+            display: block;
+            @media screen and (min-width: $tabwidth){
+              display: inline-block;
+              line-height: 2.0;
+              margin: 0 10px;
+            }
+            a {
+              text-decoration: none;
+              color: $color__via-grey;
+              font-size: 16px;
+              @media screen and (min-width: $tabwidth){
+                font-size: 18px;
+                font-weight: 700;
+              }
+              &:hover {
+                color: $color__via-red;
+              }
+            }
+          }
         }
       }
     }
     >.col-3 {
+      width: 80%;
+      margin: 20px auto 10px auto;
+      text-align: center;
+      order: 2;
+      @media screen and (min-width: $tabwidth){
+        width: 20%;
+        margin: 0;
+        order: 3;
+      }
       a {
-
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: $color__via-red;
+        color: white;
+        font-size: 18px;
+        &:hover {
+          color: white;
+        }
       }
     }
   }

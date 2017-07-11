@@ -67,4 +67,14 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+	$('#masthead #site-navigation button').click(function(){
+		if($('#site-navigation').hasClass('toggled')){
+			$('#site-navigation').removeClass('toggled');
+			$('#masthead >.row-1').removeClass('toggled');
+		} else {
+			$('#masthead >.row-1').addClass('toggled');
+			$('#site-navigation').addClass('toggled');
+		}
+	});
+
 });// END #####################################    END

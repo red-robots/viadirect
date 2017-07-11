@@ -16,7 +16,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*//*!
+*/@import url("https://fonts.googleapis.com/css?family=Rubik:400,700");/*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -587,7 +587,7 @@ optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 button:focus{outline:0}
-body,button,input,select,textarea{color:black;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,textarea{color:black;font-family:"Rubik",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
 p{margin-bottom:1.5em}
@@ -738,6 +738,43 @@ html[xmlns] .flexslider .slides{display:block}
 .copy ul li a,.copy ol li a{cursor:pointer}
 .copy ul li a:hover,.copy ol li a:hover{color:black}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
+#masthead{position:fixed;top:0;left:0;width:100%;padding:10px 20px 20px 20px;background-color:rgba(255,255,255,0.8);max-height:100vh;overflow-y:auto;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-justify-content:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+@media screen and (min-width:600px){#masthead{padding:10px 3% 20px 3%}
+}#masthead>.row-1{width:100%;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;margin:0;display:none;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
+#masthead>.row-1.toggled{display:block}
+@media screen and (min-width:600px){#masthead>.row-1{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;display:block;margin:0 0 20px 0}
+}#masthead>.row-1 ul{margin:0;padding:0;text-align:center}
+@media screen and (min-width:600px){#masthead>.row-1 ul{text-align:right}
+}#masthead>.row-1 ul li{display:block;margin:10px 0;list-style-type:none}
+#masthead>.row-1 ul li:first-child{margin:0 0 10px 0}
+@media screen and (min-width:600px){#masthead>.row-1 ul li{display:inline-block;margin:0 5px}
+#masthead>.row-1 ul li:first-child{margin:0 5px}
+}#masthead>.row-1 ul li a{text-decoration:none;color:#535353;font-size:16px}
+@media screen and (min-width:600px){#masthead>.row-1 ul li a{font-size:14px}
+}#masthead>.row-1 ul li a:hover{color:#ea1e43}
+#masthead>.row-2{width:100%;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
+@media screen and (min-width:600px){#masthead>.row-2{-webkit-align-content:flex-end;-ms-flex-line-pack:end;align-content:flex-end;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
+}#masthead>.row-2 .logo{margin:0;width:80%;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
+@media screen and (min-width:600px){#masthead>.row-2 .logo{margin:0;width:20%;min-width:200px}
+}#masthead>.row-2 .logo a{display:block}
+#masthead>.row-2 .logo a img{display:block;width:100%}
+#masthead>.row-2 #site-navigation{text-align:center;width:100%;-webkit-box-ordinal-group:4;-webkit-order:3;-ms-flex-order:3;order:3}
+@media screen and (min-width:600px){#masthead>.row-2 #site-navigation{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
+}#masthead>.row-2 #site-navigation.toggled .menu-primary-container{display:block}
+#masthead>.row-2 #site-navigation button{display:inline-block;margin:10px 0;box-shadow:none;text-shadow:none;background-color:#ea1e43;color:white;border:0;border-radius:0;font-size:18px}
+@media screen and (min-width:600px){#masthead>.row-2 #site-navigation button{display:none}
+}#masthead>.row-2 #site-navigation .menu-primary-container{display:none}
+@media screen and (min-width:600px){#masthead>.row-2 #site-navigation .menu-primary-container{display:block}
+}#masthead>.row-2 #site-navigation .menu-primary-container ul{margin:0;padding:0;text-align:center}
+#masthead>.row-2 #site-navigation .menu-primary-container ul li{list-style-type:none;margin:10px 0;display:block}
+@media screen and (min-width:600px){#masthead>.row-2 #site-navigation .menu-primary-container ul li{display:inline-block;line-height:2;margin:0 10px}
+}#masthead>.row-2 #site-navigation .menu-primary-container ul li a{text-decoration:none;color:#535353;font-size:16px}
+@media screen and (min-width:600px){#masthead>.row-2 #site-navigation .menu-primary-container ul li a{font-size:18px;font-weight:700}
+}#masthead>.row-2 #site-navigation .menu-primary-container ul li a:hover{color:#ea1e43}
+#masthead>.row-2>.col-3{width:80%;margin:20px auto 10px auto;text-align:center;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
+@media screen and (min-width:600px){#masthead>.row-2>.col-3{width:20%;margin:0;-webkit-box-ordinal-group:4;-webkit-order:3;-ms-flex-order:3;order:3}
+}#masthead>.row-2>.col-3 a{display:block;padding:10px;text-decoration:none;background-color:#ea1e43;color:white;font-size:18px}
+#masthead>.row-2>.col-3 a:hover{color:white}
 #colophon{background-color:#535353}
 .template-index>.row-1{background-color:#535353;background-size:100%;background-position:top;background-repeat:no-repeat}
 .template-index>.row-3{background-color:#54b4b0}
