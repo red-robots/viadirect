@@ -88,11 +88,7 @@
         <?php endif;?>
     </section><!--.row-2-->
     <section class="row-3">
-        <?php $row_4_title = get_field("row_4_title");
-        if($row_4_title):?>
-            <header><h2><?php echo $row_4_title;?></h2></header>
-        <?php endif;
-        $args = array(
+        <?php $args = array(
             'post_type'=>'testimonial',
             'posts_per_page'=>10,
             'orderby'=>'date',
@@ -100,6 +96,11 @@
         );
         $query = new WP_Query($args);
         if($query->have_posts()):?>
+            <?php $row_4_title = get_field("row_4_title");
+            if($row_4_title):?>
+                <header><h2><?php echo $row_4_title;?></h2></header>
+            <?php endif;?>
+        
             <div class="testimonials flexslider">
                 <ul>
                     <?php while($query->have_posts()): $query->the_post();?>

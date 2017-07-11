@@ -24,7 +24,8 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
-			<?php wp_nav_menu( array( 'theme_location' => 'header') ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'header') ); 
+			//todo insert form?>
 		</div><!-- row-1 -->
 		<div class="row-2">
 			<?php if(is_home()) { ?>

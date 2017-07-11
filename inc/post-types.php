@@ -8,7 +8,7 @@ function js_custom_init()
 	// Register the Homepage Slides
   
      $labels = array(
-	'name' => _x('Testimoials', 'post type general name'),
+	'name' => _x('Testimonials', 'post type general name'),
     'singular_name' => _x('Testimonial', 'post type singular name'),
     'add_new' => _x('Add New', 'Testimonial'),
     'add_new_item' => __('Add New Testimonial'),
