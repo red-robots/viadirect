@@ -124,6 +124,8 @@
                     <?php endwhile;?>
                 </ul>
             </div><!--testimonials-->
-        <?php endif;?>
+            <?php $post = get_post(40);
+            setup_postdata($post);
+        endif;?>
     </section>
 </article><!-- #post-## -->
