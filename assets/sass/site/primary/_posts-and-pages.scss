@@ -1,0 +1,79 @@
+.template-index {
+    >.row-1 {
+        background-color: $color__via-grey;
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        >.row-1 {
+            header {
+                h2 {
+
+                }
+                h3 {
+
+                }
+            }
+        }
+        >.row-2 {
+            >.row-1 {
+                .box {
+                    header {
+                        h3 {
+
+                        }
+                    }
+                    .copy {
+
+                    }
+                    a.link {
+
+                    }
+                }
+            }
+            >.row-2 {
+
+            }
+        }
+    }
+    >.row-2 {
+        button {
+
+        }
+        header {
+            h2 {
+
+            }
+        }
+        .copy {
+
+        }
+        img.banner {
+
+        }
+    }
+    >.row-3 {
+        background-color: $color__via-green;
+        header {
+            h2 {
+
+            }
+        }
+        .testimonials.flexslider {
+            ul {
+                li {
+                    .copy {
+
+                    }
+                    header {
+                        h2 {
+
+                        }
+                        h3 {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

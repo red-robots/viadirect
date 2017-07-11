@@ -28,7 +28,7 @@
         </div><!--.row-1-->
         <section class="row-2">
             <div class="row-1">
-                <?php for($i=0;$i<3;$i++):?>
+                <?php for($i=1;$i<4;$i++):?>
                     <div class="box box-<?php echo $i;?>">
                         <?php $title = get_field("row_2_box_{$i}_title");
                         $copy = get_field("row_2_box_{$i}_copy");
@@ -47,7 +47,7 @@
                             </div><!--.copy-->
                         <?php endif;?>
                         <?php if($link&&$link_text):?>
-                            <a href="<?php echo $link;?>">
+                            <a class="link" href="<?php echo $link;?>">
                                 <?php echo $link_text;?>
                             </a>
                         <?php endif;?>
@@ -84,7 +84,7 @@
             </div><!--.copy-->
         <?php endif;
         if($row_3_image):?>
-            <img src="<?php echo $row_3_image['url'];?>" alt="<?php echo $row_3_image['alt'];?>">
+            <img class="banner" src="<?php echo $row_3_image['url'];?>" alt="<?php echo $row_3_image['alt'];?>">
         <?php endif;?>
     </section><!--.row-2-->
     <section class="row-3">

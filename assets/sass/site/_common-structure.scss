@@ -69,3 +69,72 @@
     }
   }
 }
+#masthead {
+  >.row-1 {
+    ul {
+      li {
+        a {
+
+        }
+      }
+    }
+  }
+  >.row-2 {
+    .logo {
+      a {
+        img {
+
+        }
+      }
+    }
+    #site-navigation {
+      button {
+
+      }
+      ul {
+        li {
+
+        }
+      }
+    }
+    >.col-3 {
+      a {
+
+      }
+    }
+  }
+}
+#colophon {
+  background-color: $color__via-grey;
+  >.row-1 {
+    >.col-1 {
+      ul {
+        li {
+
+        }
+      }
+      .telephone {
+        a {
+
+        }
+      }
+    }
+    >.col-2 {
+      a {
+        i {
+
+        }
+      }
+    }
+    >.col-3 {
+      header {
+        h2 {
+
+        }
+      }
+    }
+  }
+  >.row-2 {
+
+  }
+}
