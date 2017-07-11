@@ -70,7 +70,6 @@
   }
 }
 #masthead {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -85,6 +84,7 @@
   @include flexbox-justify(flex-start);
   @media screen and (min-width: $tabwidth){
     padding: 10px 3% 20px 3%;
+    position: fixed;
   }
   >.row-1 {
     width: 100%;

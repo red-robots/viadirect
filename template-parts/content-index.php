@@ -27,31 +27,33 @@
             </header>
         </div><!--.row-1-->
         <section class="row-2">
-            <div class="row-1">
+            <div class="row-1 clear-bottom">
                 <?php for($i=1;$i<4;$i++):?>
-                    <div class="box box-<?php echo $i;?>">
-                        <?php $title = get_field("row_2_box_{$i}_title");
-                        $copy = get_field("row_2_box_{$i}_copy");
-                        $link_text = get_field("row_2_box_{$i}_link_text");
-                        $link = get_field("row_2_box_{$i}_link");?>
-                        <?php if($title):?>
-                            <header>
-                                <h3>
-                                    <?php echo $title;?>
-                                </h3>
-                            </header>
-                        <?php endif;?>
-                        <?php if($copy):?>
-                            <div class="copy">
-                                <?php echo $copy;?>
-                            </div><!--.copy-->
-                        <?php endif;?>
-                        <?php if($link&&$link_text):?>
-                            <a class="link" href="<?php echo $link;?>">
-                                <?php echo $link_text;?>
-                            </a>
-                        <?php endif;?>
-                    </div><!--box-i-->
+                    <div class="block js-blocks block-<?php echo $i;?>">
+                        <div class="wrapper">
+                            <?php $title = get_field("row_2_box_{$i}_title");
+                            $copy = get_field("row_2_box_{$i}_copy");
+                            $link_text = get_field("row_2_box_{$i}_link_text");
+                            $link = get_field("row_2_box_{$i}_link");?>
+                            <?php if($title):?>
+                                <header>
+                                    <h3>
+                                        <?php echo $title;?>
+                                    </h3>
+                                </header>
+                            <?php endif;?>
+                            <?php if($copy):?>
+                                <div class="copy">
+                                    <?php echo $copy;?>
+                                </div><!--.copy-->
+                            <?php endif;?>
+                            <?php if($link&&$link_text):?>
+                                <a class="link" href="<?php echo $link;?>">
+                                    <?php echo $link_text;?>
+                                </a>
+                            <?php endif;?>
+                        </div><!--.wrapper-->
+                    </div><!--block-i-->
                 <?php endfor;?>
             </div><!--.row-1-->
             <?php $row_2_text = get_field("row_2_text");?>
