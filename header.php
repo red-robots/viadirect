@@ -23,22 +23,34 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
+		<div class="row-1">
+			<?php wp_nav_menu( array( 'theme_location' => 'header') ); ?>
+		</div><!-- row-1 -->
+		<div class="row-2">
 			<?php if(is_home()) { ?>
-	            <h1 class="logo">
+	            <h1 class="logo col-1">
 	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </h1>
 	        <?php } else { ?>
-	            <div class="logo">
+	            <div class="logo col-1">
 	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </div>
 	        <?php } ?>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation col-2" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-		</div><!-- wrapper -->
+			<?php $request_demo_text = get_field("request_demo_text","option");
+			$request_demo_link = get_field("request_demo_link","option");
+			if($request_demo_link&&$request_demo_text):?>
+				<div class="col-3">
+					<a href="<?php echo $request_demo_link;?>">
+						<?php echo $request_demo_text;?>
+					</a>
+				</div><!--.col-3-->
+			<?php endif;?>
+		</div><!-- row-2 -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">

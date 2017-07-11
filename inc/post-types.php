@@ -36,7 +36,7 @@ function js_custom_init()
     'supports' => array('title','editor','custom-fields','thumbnail'),
 	
   ); 
-  register_post_type('testimonials',$args); // name used in query
+  register_post_type('testimonial',$args); // name used in query
   
   // Add more between here
   
