@@ -17,11 +17,11 @@
 		<div class="row-1">
 			<div class="col-1">
 				<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
-				<?php $telephone = get_field("telephone","option");
-				if($telephone):?>
-					<div class="telephone">
-						<a href="tel:<?php echo preg_replace("/[^0-9]/","",$telephone);?>">
-							<?php echo $telephone;?>
+				<?php $telephone_number = get_field("telephone_number","option");
+				if($telephone_number):?>
+					<div class="telephone-number">
+						<a href="tel:<?php echo preg_replace("/[^0-9]/","",$telephone_number);?>">
+							<?php echo $telephone_number;?>
 						</a>
 					</div><!--.telephone-->
 				<?php endif;?>

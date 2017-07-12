@@ -211,7 +211,7 @@
             @media screen and (min-width: $tabwidth){
               display: inline-block;
               line-height: 2.0;
-              margin: 0 10px;
+              margin: 0 20px;
             }
             a {
               text-decoration: none;
@@ -255,35 +255,124 @@
 }
 #colophon {
   background-color: $color__via-grey;
+  padding: 20px;
+  color: white;
+  @media screen and (min-width: $tabwidth){
+    padding: 3%;
+  }
   >.row-1 {
+    @include flexbox();
+    @include flexbox-direction(column);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-justify(flex-start);
+    @media screen and (min-width: $tabwidth){
+      @include flexbox-align-content(flex-start);
+      @include flexbox-align-items(flex-start);
+      @include flexbox-direction(row);
+      @include flexbox-justify(space-between);
+    }
     >.col-1 {
+      width: 100%;
+      @media screen and (min-width: $tabwidth){
+        width: 40%;
+      }
       ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        @media screen and (min-width: $tabwidth){
+          text-align: left;
+        }
         li {
-
+          display: block;
+          list-style-type: none;
+          margin: 10px 0;
+          @media screen and (min-width: $tabwidth){
+            margin: 0;
+          }
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            &:hover {
+              color: $color__via-green;
+            }
+          }
         }
       }
-      .telephone {
+      .telephone-number {
+        margin: 10px 0 0 0;
+        text-align: center;
+        @media screen and (min-width: $tabwidth){
+          text-align: left;
+          margin: 20px 0 0 0;
+        }
         a {
-
+          color: white;
+          text-decoration: none;
+          font-size: 16px;
+          &:hover {
+            color: $color__via-green;
+          }
         }
       }
     }
     >.col-2 {
+      width: 100%;
+      margin: 20px 0 0 0;
+      text-align: center;
+      @media screen and (min-width: $tabwidth){
+        width: 20%;
+        margin: 0;
+        min-width: 200px;
+      }
       a {
-        i {
-
+        width: 45px;
+        height: 45px;
+        line-height: 1;
+        color: white;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: inline-block;
+        margin: 0 8px;
+        padding: 8px 0;
+        font-size: 27px;
+        &:hover {
+          color: $color__via-green;
+          border: 1px solid $color__via-green;
         }
       }
     }
     >.col-3 {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0 0 0;
+      @media screen and (min-width: $tabwidth){
+        width: 40%;
+        margin: 0;
+        text-align: right;
+      }
       header {
         h2 {
-
+          margin: 0;
+          font-size: 20px;
+          font-weight: 500;
+          @media screen and (min-width: $midwidth){
+            font-size: 30px;
+          }
         }
       }
     }
   }
   >.row-2 {
-
+    margin: 20px 0 0 0;
+    color: $color__via-light-grey;
+    text-align: center;
+    font-size: 14px;
+    @media screen and (min-width: $tabwidth){
+      margin: 6% 0 0 0;
+    }
   }
 }
