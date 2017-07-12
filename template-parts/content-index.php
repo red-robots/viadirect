@@ -71,7 +71,7 @@
         $row_3_copy = get_field("row_3_copy");
         $row_3_image = get_field("row_3_image");
         if($request_demo_link&&$request_demo_text):?>
-            <div class="button">
+            <div class="button-top">
                 <a href="<?php echo $request_demo_link;?>">
                     <?php echo $request_demo_text;?>
                 </a>
@@ -81,12 +81,20 @@
             <header><h2><?php echo $row_3_title;?></h2></header>
         <?php endif;
         if($row_3_copy):?>
+            <div class="spacer"></div>
             <div class="copy">
                 <?php echo $row_3_copy;?>
             </div><!--.copy-->
         <?php endif;
         if($row_3_image):?>
             <img class="banner" src="<?php echo $row_3_image['url'];?>" alt="<?php echo $row_3_image['alt'];?>">
+        <?php endif;
+        if($request_demo_link&&$request_demo_text):?>
+            <div class="button-bottom">
+                <a href="<?php echo $request_demo_link;?>">
+                    <?php echo $request_demo_text;?>
+                </a>
+            </div><!--.button-->
         <?php endif;?>
     </section><!--.row-2-->
     <section class="row-3">
@@ -101,28 +109,30 @@
             <?php $row_4_title = get_field("row_4_title");
             if($row_4_title):?>
                 <header><h2><?php echo $row_4_title;?></h2></header>
+                <div class="spacer"></div>
             <?php endif;?>
-        
             <div class="testimonials flexslider">
-                <ul>
+                <ul class="slides">
                     <?php while($query->have_posts()): $query->the_post();?>
                         <li>
-                            <div class="copy">
-                                <?php the_content();?>
-                            </div><!--.copy-->
-                            <?php $title = get_field("title");
-                            $name = get_field("name");
-                            if($name || $title):?>
-                                <div class="spacer"></div><!--.spacer-->
-                                <header>
-                                    <?php if($name):?>
-                                        <h2><?php echo $name;?></h2>
-                                    <?php endif;
-                                    if($title):?>
-                                        <h3><?php echo $title;?></h3>
-                                    <?php endif;?>
-                                </header>  
-                            <?php endif;?>
+                            <div class="wrapper">
+                                <div class="copy">
+                                    <?php the_content();?>
+                                </div><!--.copy-->
+                                <?php $title = get_field("title");
+                                $name = get_field("name");
+                                if($name || $title):?>
+                                    <div class="spacer"></div><!--.spacer-->
+                                    <header>
+                                        <?php if($name):?>
+                                            <h2><?php echo $name;?></h2>
+                                        <?php endif;
+                                        if($title):?>
+                                            <h3><?php echo $title;?></h3>
+                                        <?php endif;?>
+                                    </header>  
+                                <?php endif;?>
+                            </div><!--.wrapper-->
                         </li>
                     <?php endwhile;?>
                 </ul>

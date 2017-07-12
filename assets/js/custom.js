@@ -23,9 +23,30 @@ jQuery(document).ready(function ($) {
 	*	Flexslider
 	*
 	------------------------------------*/
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
+	// tiny helper function to add breakpoints
+	function getGridSize() {
+		return (window.innerWidth < 600) ? 1 :
+			(window.innerWidth < 900) ? 2 : 3 ;
+	}
+	$(window).load(function(){
+		console.log(getGridSize());
+		$('.flexslider').flexslider({
+			animation: "slide",
+			itemWidth: 338,
+			itemMargin: 60,
+			minItems: getGridSize(),
+			maxItems: getGridSize(),
+			prevText: '<i class="fa fa-chevron-circle-left"></i>',
+			nextText: '<i class="fa fa-chevron-circle-right"></i>',
+		}); // end register flexslider
+	});
+	// check grid size on resize event
+	$(window).resize(function() {
+		var gridSize = getGridSize();
+		var $flexslider = $('.flexslider').data('flexslider');
+		$flexslider.vars.minItems = gridSize;
+		$flexslider.vars.maxItems = gridSize;
+	});
 	
 	/*
 	*
