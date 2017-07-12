@@ -97,15 +97,15 @@
             </div><!--.button-->
         <?php endif;?>
     </section><!--.row-2-->
-    <section class="row-3">
-        <?php $args = array(
-            'post_type'=>'testimonial',
-            'posts_per_page'=>10,
-            'orderby'=>'date',
-            'order'=>'desc'
-        );
-        $query = new WP_Query($args);
-        if($query->have_posts()):?>
+    <?php $args = array(
+        'post_type'=>'testimonial',
+        'posts_per_page'=>10,
+        'orderby'=>'date',
+        'order'=>'desc'
+    );
+    $query = new WP_Query($args);
+    if($query->have_posts()):?>
+        <section class="row-3">
             <?php $row_4_title = get_field("row_4_title");
             if($row_4_title):?>
                 <header><h2><?php echo $row_4_title;?></h2></header>
@@ -137,8 +137,8 @@
                     <?php endwhile;?>
                 </ul>
             </div><!--testimonials-->
-            <?php $post = get_post(40);
-            setup_postdata($post);
-        endif;?>
-    </section>
+        </section>
+        <?php $post = get_post(40);
+        setup_postdata($post);
+    endif;?>
 </article><!-- #post-## -->
