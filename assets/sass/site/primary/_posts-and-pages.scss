@@ -280,3 +280,23 @@
         }
     }
 }
+.template-page, .template-sitemap, .error-404 {
+    padding: 20px;
+    @media screen and (min-width: $tabwidth){
+        padding: 8%;
+    }
+    header {
+        h1 {
+            margin: 0;
+            color: $color__via-green;
+            font-weight: 500;
+            font-size: 30px;
+            @media screen and (min-width: $tabwidth){
+                font-size: 45px;
+            }
+        }
+    }
+    .copy {
+        margin: 20px 0 0 0;
+    }
+}

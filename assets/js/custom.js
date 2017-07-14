@@ -29,7 +29,6 @@ jQuery(document).ready(function ($) {
 			(window.innerWidth < 900) ? 2 : 3 ;
 	}
 	$(window).load(function(){
-		console.log(getGridSize());
 		$('.flexslider').flexslider({
 			animation: "slide",
 			itemWidth: 338,
@@ -43,9 +42,12 @@ jQuery(document).ready(function ($) {
 	// check grid size on resize event
 	$(window).resize(function() {
 		var gridSize = getGridSize();
-		var $flexslider = $('.flexslider').data('flexslider');
-		$flexslider.vars.minItems = gridSize;
-		$flexslider.vars.maxItems = gridSize;
+		var $flexslider_dom = $('.flexslider');
+		if($flexslider_dom.length===1){
+			var $flexslider = $flexslider_dom.data('flexslider');
+			$flexslider.vars.minItems = gridSize;
+			$flexslider.vars.maxItems = gridSize;
+		}
 	});
 	
 	/*

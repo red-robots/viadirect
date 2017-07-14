@@ -70,13 +70,10 @@
   }
 }
 #masthead {
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 10px 20px 20px 20px;
   background-color: rgba(255,255,255,0.9);
   max-height: 100vh;
-  z-index: 20;
   overflow-y: auto;
   @include flexbox();
   @include flexbox-direction(column);
@@ -85,7 +82,12 @@
   @include flexbox-justify(flex-start);
   @media screen and (min-width: $tabwidth){
     padding: 10px 3% 20px 3%;
-    position: fixed;
+    &.home {
+      z-index: 20;
+      top: 0;
+      left: 0;
+      position: fixed;
+    }
   }
   >.row-1 {
     width: 100%;
