@@ -882,13 +882,11 @@ body.home #masthead{box-shadow:none}
 }.template-via>.row-2>header{text-align:center}
 .template-via>.row-2>header h2{font-size:30px;margin:0 0 8% 0;font-weight:500}
 @media screen and (min-width:600px){.template-via>.row-2>header h2{font-size:40px}
-}.template-via>.row-2>.col-1{padding-top:80px}
-@media screen and (min-width:600px){.template-via>.row-2>.col-1{float:left;width:30%;padding-right:12%}
-}.template-via>.row-2>.col-1 #Layer_1{width:50%;margin:0 auto -25% auto;display:block}
-@media screen and (min-width:600px){.template-via>.row-2>.col-1 #Layer_1{width:70%}
-}.template-via>.row-2>.col-1 #Layer_2{width:80%;margin:0 auto;display:block}
-@media screen and (min-width:600px){.template-via>.row-2>.col-1 #Layer_2{width:100%}
-}.template-via>.row-2>.col-2{margin:20px 0 0 0;color:white;font-size:20px;font-weight:300}
+}.template-via>.row-2>.col-1{padding-top:80px;width:80%;margin:0 auto}
+@media screen and (min-width:600px){.template-via>.row-2>.col-1{float:left;width:30%;margin:0;padding-right:12%}
+}.template-via>.row-2>.col-1 #Layer_1{width:70%;margin:0 auto -25% auto;display:block}
+.template-via>.row-2>.col-1 #Layer_2{width:100%;margin:0 auto;display:block}
+.template-via>.row-2>.col-2{margin:20px 0 0 0;color:white;font-size:20px;font-weight:300}
 @media screen and (min-width:600px){.template-via>.row-2>.col-2{margin:0;float:left;width:70%;font-size:25px}
 }.template-via>.row-2>.col-2 p{margin:20px 0}
 @media screen and (min-width:600px){.template-via>.row-2>.col-2 p{margin:40px 0}

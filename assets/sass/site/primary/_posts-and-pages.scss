@@ -349,26 +349,23 @@
         }
         >.col-1 {
             padding-top: 80px;
+            width: 80%;
+            margin: 0 auto;
             @media screen and (min-width: $tabwidth){
                 float: left;
                 width: 30%;
+                margin: 0;
                 padding-right: 12%;
             }
             #Layer_1 {
-                width: 50%;
+                width: 70%;
                 margin: 0 auto -25% auto;
                 display: block;
-                @media screen and (min-width: $tabwidth){
-                    width: 70%;
-                }
             }
             #Layer_2 {
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
                 display: block;
-                @media screen and (min-width: $tabwidth){
-                    width: 100%;
-                }
             }
         }
         >.col-2 {

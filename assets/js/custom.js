@@ -112,13 +112,17 @@ jQuery(document).ready(function ($) {
 				var svg_width = $svg.width();
 				var current_position = $window.scrollTop();
 				var percent_in_offset = (current_position - svg_height + offset)/(fudge + offset);
-				if( percent_in_offset >= 0 && percent_in_offset <= 1 ){
+				if( percent_in_offset >= 0 ){
+					if(percent_in_offset > 1){
+						percent_in_offset = 1;
+					}
 					$layer_1.css({
 						marginBottom: -0.25*svg_width*(1-percent_in_offset)+"px",
 						marginTop: -0.25*svg_width*(percent_in_offset)+"px"
 					});
 				}
 			}
+			move();
 			$window.on('resize',function(){
 				$layer_1.css({
 					marginBottom: "",
