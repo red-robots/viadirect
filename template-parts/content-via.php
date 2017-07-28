@@ -86,7 +86,7 @@
 		</div><!--.row-4-->
 	<?php endif;?>
 	<section class="row-5">
-		<div class="block-wrapper">
+		<div class="block-wrapper clear-bottom">
 			<?php for($i = 1; $i<4; $i++):
 				$heading = get_field("row_5_col_{$i}_heading");
 				$icon = get_field("row_5_col_{$i}_icon");
