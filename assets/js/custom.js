@@ -100,4 +100,33 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	$(window).load(function(){
+		if($('.svg').length>0){
+			var $svg = $('.svg');
+			var svg_height = $svg.offset().top;
+			var $layer_1 = $('#Layer_1');
+			var $window = $(window);
+			var offset = 500;
+			var fudge = -200;
+			function move(){
+				var svg_width = $svg.width();
+				var current_position = $window.scrollTop();
+				var percent_in_offset = (current_position - svg_height + offset)/(fudge + offset);
+				if( percent_in_offset >= 0 && percent_in_offset <= 1 ){
+					$layer_1.css({
+						marginBottom: -0.25*svg_width*(1-percent_in_offset)+"px",
+						marginTop: -0.25*svg_width*(percent_in_offset)+"px"
+					});
+				}
+			}
+			$window.on('resize',function(){
+				$layer_1.css({
+					marginBottom: "",
+					marginTop: ""
+				});
+			});
+			$window.on('scroll',move);
+		}
+	});
+
 });// END #####################################    END

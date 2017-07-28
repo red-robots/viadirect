@@ -16,7 +16,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/@import url("https://fonts.googleapis.com/css?family=Rubik:400,700");/*!
+*/@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,700");/*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -739,7 +739,8 @@ html[xmlns] .flexslider .slides{display:block}
 .copy ul li a,.copy ol li a{cursor:pointer}
 .copy ul li a:hover,.copy ol li a:hover{color:#ea1e43}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
-#masthead{width:100%;padding:10px 20px 20px 20px;background-color:rgba(255,255,255,0.9);max-height:100vh;overflow-y:auto;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-justify-content:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+body.home #masthead{box-shadow:none}
+#masthead{width:100%;padding:10px 20px 20px 20px;background-color:rgba(255,255,255,0.9);box-shadow:0 .5px 30px black;max-height:100vh;overflow-y:auto;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-justify-content:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 @media screen and (min-width:600px){#masthead{padding:10px 3% 20px 3%}
 #masthead.home{z-index:20;top:0;left:0;position:fixed}
 }#masthead>.row-1{width:100%;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;margin:0;display:none;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
@@ -869,6 +870,60 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-page header h1,.template-sitemap header h1,.error-404 header h1{margin:0;color:#54b4b0;font-weight:500;font-size:30px}
 @media screen and (min-width:600px){.template-page header h1,.template-sitemap header h1,.error-404 header h1{font-size:45px}
 }.template-page .copy,.template-sitemap .copy,.error-404 .copy{margin:20px 0 0 0}
+.template-via>.row-1{padding:20px;text-align:center}
+@media screen and (min-width:600px){.template-via>.row-1{padding:7% 3%}
+}.template-via>.row-1>header h1{font-size:35px;margin:0 0 20px 0;font-weight:500}
+@media screen and (min-width:600px){.template-via>.row-1>header h1{font-size:50px}
+}.template-via>.row-1>header h1 span.red{color:#ea1e43}
+.template-via>.row-1>header .sub-heading{font-size:20px;font-weight:300;color:#535353}
+@media screen and (min-width:600px){.template-via>.row-1>header .sub-heading{font-size:30px}
+}.template-via>.row-2{background-color:#54b4b0;padding:20px;color:white}
+@media screen and (min-width:600px){.template-via>.row-2{padding:4% 10% 15% 10%}
+}.template-via>.row-2>header{text-align:center}
+.template-via>.row-2>header h2{font-size:30px;margin:0 0 8% 0;font-weight:500}
+@media screen and (min-width:600px){.template-via>.row-2>header h2{font-size:40px}
+}.template-via>.row-2>.col-1{padding-top:80px}
+@media screen and (min-width:600px){.template-via>.row-2>.col-1{float:left;width:30%;padding-right:12%}
+}.template-via>.row-2>.col-1 #Layer_1{width:50%;margin:0 auto -25% auto;display:block}
+@media screen and (min-width:600px){.template-via>.row-2>.col-1 #Layer_1{width:70%}
+}.template-via>.row-2>.col-1 #Layer_2{width:80%;margin:0 auto;display:block}
+@media screen and (min-width:600px){.template-via>.row-2>.col-1 #Layer_2{width:100%}
+}.template-via>.row-2>.col-2{margin:20px 0 0 0;color:white;font-size:20px;font-weight:300}
+@media screen and (min-width:600px){.template-via>.row-2>.col-2{margin:0;float:left;width:70%;font-size:25px}
+}.template-via>.row-2>.col-2 p{margin:20px 0}
+@media screen and (min-width:600px){.template-via>.row-2>.col-2 p{margin:40px 0}
+}.template-via>.row-2>.col-2 p:first-child{margin-top:0}
+.template-via>.row-2>.col-2 p:last-child{margin-bottom:0}
+.template-via>.row-3{padding:20px;text-align:center}
+@media screen and (min-width:600px){.template-via>.row-3{padding:7% 3%}
+}.template-via>.row-3 .heading{font-size:30px;font-weight:500;color:#54b4b0}
+@media screen and (min-width:600px){.template-via>.row-3 .heading{font-size:40px}
+}.template-via>.row-3 .button{margin:20px auto 0 auto;width:calc(.8*(100% + 40px))}
+@media screen and (min-width:600px){.template-via>.row-3 .button{display:inline-block;width:auto;margin:6% 0 0 0}
+}.template-via>.row-3 .button a{display:block;padding:10px 15px;font-size:18px;text-decoration:none;color:white;background-color:#ea1e43}
+.template-via>.row-3 .button a:hover{color:white}
+.template-via>.row-4{background-color:#535353;position:relative;padding:20px 20px 30px 20px;text-align:center}
+@media screen and (min-width:600px){.template-via>.row-4{padding:7% 3% 9.2% 3%}
+}.template-via>.row-4>header h2{margin:0;font-size:40px;color:white;line-height:1.1;text-transform:uppercase}
+@media screen and (min-width:600px){.template-via>.row-4>header h2{font-size:50px}
+}@media screen and (min-width:1200px){.template-via>.row-4>header h2{font-size:70px}
+}.template-via>.row-4 img{width:100%;display:block;position:absolute;bottom:0;left:0}
+.template-via>.row-5{padding:20px;text-align:center}
+@media screen and (min-width:600px){.template-via>.row-5{padding:6% 0 8% 0}
+}@media screen and (min-width:900px){.template-via>.row-5>.block-wrapper{padding:0 1.04%}
+}.template-via>.row-5>.block-wrapper .block{width:100%;padding:20px;background-color:#535353;color:white;border:1px solid white;margin:20px 0 0 0}
+.template-via>.row-5>.block-wrapper .block:first-child{margin:0}
+@media screen and (min-width:900px){.template-via>.row-5>.block-wrapper .block{width:29.33333%;margin:0 2%;padding:40px 20px 70px 20px;float:left;display:block}
+.template-via>.row-5>.block-wrapper .block:first-child{margin:0 2%}
+}.template-via>.row-5>.block-wrapper .block i{font-size:100px;line-height:1}
+.template-via>.row-5>.block-wrapper .block>header{margin:20px 0}
+.template-via>.row-5>.block-wrapper .block>header h3{margin:0;font-size:25px;font-weight:500}
+@media screen and (min-width:600px){.template-via>.row-5>.block-wrapper .block>header h3{font-size:30px}
+}.template-via>.row-5>.block-wrapper .block .copy{text-align:left;font-weight:300;color:white}
+.template-via>.row-5>.button{width:calc(.8*(100% + 40px));margin:30px auto 0 auto}
+@media screen and (min-width:600px){.template-via>.row-5>.button{display:inline-block;margin:10% 0 0 0;width:auto}
+}.template-via>.row-5>.button a{display:block;padding:10px 15px;font-size:18px;text-decoration:none;color:white;background-color:#ea1e43}
+.template-via>.row-5>.button a:hover{color:white}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

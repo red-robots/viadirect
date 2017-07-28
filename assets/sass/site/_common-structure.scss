@@ -69,10 +69,16 @@
     }
   }
 }
+body.home {
+  #masthead {
+    box-shadow: none;
+  }
+}
 #masthead {
   width: 100%;
   padding: 10px 20px 20px 20px;
   background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 .5px 30px black;
   max-height: 100vh;
   overflow-y: auto;
   @include flexbox();
