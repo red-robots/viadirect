@@ -908,7 +908,7 @@ html[xmlns] .flexslider .slides{display:block}
 .template-via-smart>.row-3 .button a:hover{color:white}
 .template-via-smart>.row-4{background-color:#535353;position:relative;padding:20px 20px 30px 20px;text-align:center}
 @media screen and (min-width:600px){.template-via-smart>.row-4{padding:7% 3% 9.2% 3%}
-}.template-via-smart>.row-4>header h2{margin:0;font-size:40px;color:white;line-height:1.1;text-transform:uppercase}
+}.template-via-smart>.row-4>header h2{margin:0;font-size:35px;color:white;line-height:1.1;text-transform:uppercase}
 @media screen and (min-width:600px){.template-via-smart>.row-4>header h2{font-size:50px}
 }@media screen and (min-width:1200px){.template-via-smart>.row-4>header h2{font-size:70px}
 }.template-via-smart>.row-4 img{width:100%;display:block;position:absolute;bottom:0;left:0}
@@ -933,6 +933,54 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-via-smart>.row-6>.button{display:inline-block;margin:7% 0 0 0;width:auto}
 }.template-via-smart>.row-6>.button a{display:block;padding:10px 15px;font-size:18px;text-decoration:none;color:white;background-color:#ea1e43}
 .template-via-smart>.row-6>.button a:hover{color:white}
+.template-via-track>.header-background-image{background-position:center;background-size:cover;padding:10% 0;min-height:300px}
+.template-via-track>.row-1{padding:20px;text-align:center}
+@media screen and (min-width:600px){.template-via-track>.row-1{padding:4% 4% 6% 4%}
+}.template-via-track>.row-1>header{margin:0 0 20px 0}
+@media screen and (min-width:600px){.template-via-track>.row-1>header{margin:0}
+}.template-via-track>.row-1>header h1{font-size:35px;font-weight:500;margin:0}
+@media screen and (min-width:600px){.template-via-track>.row-1>header h1{font-size:50px}
+}.template-via-track>.row-1>header h1 span.red{color:#ea1e43}
+.template-via-track>.row-1>.wrapper{margin:20px 0}
+@media screen and (min-width:600px){.template-via-track>.row-1>.wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:7% 0 6% 0}
+}.template-via-track>.row-1>.wrapper>.col-1{text-align:center;font-size:25px;font-weight:300}
+@media screen and (min-width:600px){.template-via-track>.row-1>.wrapper>.col-1{font-size:35px;text-align:right;width:50%}
+}.template-via-track>.row-1>.wrapper>.col-2{margin:20px 0 0 0}
+@media screen and (min-width:600px){.template-via-track>.row-1>.wrapper>.col-2{width:50%;margin:0;padding:0 4%}
+}.template-via-track>.row-1>.wrapper>.col-2 img{width:100%;display:block}
+.template-via-track>.row-1>.button{margin:20px auto 0 auto;width:calc(.8*(100% + 40px))}
+@media screen and (min-width:600px){.template-via-track>.row-1>.button{display:inline-block;width:auto;margin:6% 0 0 0}
+}.template-via-track>.row-1>.button a{display:block;padding:10px 15px;font-size:18px;text-decoration:none;color:white;background-color:#ea1e43}
+.template-via-track>.row-1>.button a:hover{color:white}
+.template-via-track>.row-2{background-color:#54b4b0;padding:20px;color:white;font-size:25px;font-weight:700}
+@media screen and (min-width:600px){.template-via-track>.row-2{padding:8% 20%;font-size:35px}
+}.template-via-track>.row-4{background-color:#535353;position:relative;padding:20px 20px 30px 20px;text-align:center}
+@media screen and (min-width:600px){.template-via-track>.row-4{padding:7% 3% 9.2% 3%}
+}.template-via-track>.row-4>header h2{margin:0;font-size:35px;color:white;line-height:1.1;text-transform:uppercase}
+@media screen and (min-width:600px){.template-via-track>.row-4>header h2{font-size:50px}
+}@media screen and (min-width:1200px){.template-via-track>.row-4>header h2{font-size:70px}
+}.template-via-track>.row-4 img{width:100%;display:block;position:absolute;bottom:0;left:0}
+.template-via-track>.row-5{padding:20px;text-align:center}
+@media screen and (min-width:600px){.template-via-track>.row-5{padding:6% 0}
+}@media screen and (min-width:900px){.template-via-track>.row-5>.block-wrapper{padding:0 1.04%}
+}.template-via-track>.row-5>.block-wrapper .block{width:100%;padding:20px;background-color:#535353;color:white;border:1px solid white;margin:20px 0 0 0}
+.template-via-track>.row-5>.block-wrapper .block:first-child{margin:0}
+@media screen and (min-width:900px){.template-via-track>.row-5>.block-wrapper .block{width:29.33333%;margin:0 2%;padding:40px 20px 70px 20px;float:left;display:block}
+.template-via-track>.row-5>.block-wrapper .block:first-child{margin:0 2%}
+}.template-via-track>.row-5>.block-wrapper .block i{font-size:100px;line-height:1}
+.template-via-track>.row-5>.block-wrapper .block>header{margin:20px 0}
+.template-via-track>.row-5>.block-wrapper .block>header h3{margin:0;font-size:25px;font-weight:500}
+@media screen and (min-width:600px){.template-via-track>.row-5>.block-wrapper .block>header h3{font-size:30px}
+}.template-via-track>.row-5>.block-wrapper .block .copy{text-align:left;font-weight:300;color:white}
+.template-via-track>.row-6{text-align:center;padding:20px 20px 40px 20px}
+@media screen and (min-width:600px){.template-via-track>.row-6{padding:6% 6% 30% 6%}
+}.template-via-track>.row-6>.image-wrapper .image{margin:20px 0}
+@media screen and (min-width:600px){.template-via-track>.row-6>.image-wrapper .image{float:left;width:50%;padding:0 6%;margin:6% 0}
+}.template-via-track>.row-6>.image-wrapper .image img{width:100%;display:block}
+.template-via-track>.row-6>.button{width:calc(.8*(100% + 40px));margin:30px auto 0 auto}
+@media screen and (min-width:600px){.template-via-track>.row-6>.button{display:inline-block;margin:7% 0 0 0;width:auto}
+}.template-via-track>.row-6>.button a{display:block;padding:10px 15px;font-size:18px;text-decoration:none;color:white;background-color:#ea1e43}
+.template-via-track>.row-6>.button a:hover{color:white}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

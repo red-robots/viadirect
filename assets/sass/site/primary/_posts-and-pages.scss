@@ -467,7 +467,229 @@
         >header {
             h2 {
                 margin: 0;
-                font-size: 40px;
+                font-size: 35px;
+                color: white;
+                line-height: 1.1;
+                text-transform: uppercase;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 50px;
+                }
+                @media screen and (min-width: $deskwidth){
+                    font-size: 70px;
+                }
+            }
+        }
+        img {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    >.row-5 {
+        padding: 20px;
+        text-align: center;
+        @media screen and (min-width: $tabwidth){
+            padding: 6% 0;
+        }
+        >.block-wrapper {
+            @media screen and (min-width: $midwidth){
+                padding: 0 1.04%;
+            }
+            .block {
+                width: 100%;
+                padding: 20px;
+                background-color: $color__via-grey;
+                color: white;
+                border: 1px solid white;
+                margin: 20px 0 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                @media screen and (min-width: $midwidth){
+                    width: 1/3*88%;
+                    margin: 0 2%;
+                    padding: 40px 20px 70px 20px;
+                    float: left;
+                    display: block;
+                    &:first-child {
+                        margin: 0 2%;
+                    }
+                }
+                i {
+                    font-size: 100px;
+                    line-height: 1;
+                }
+                >header {
+                    margin: 20px 0;
+                    h3 {
+                        margin: 0;
+                        font-size: 25px;
+                        font-weight: 500;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 30px;
+                        }
+                    }
+                }
+                .copy { 
+                    text-align: left;
+                    font-weight: 300;
+                    color: white;
+                }
+            }
+        }
+    }
+    >.row-6 {
+        text-align: center;
+        padding: 20px 20px 40px 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 6% 6% 30% 6%;
+        }
+        >.image-wrapper {
+            .image {
+                margin: 20px 0;
+                @media screen and (min-width: $tabwidth){
+                    float: left;
+                    width: 50%;
+                    padding: 0 6%;
+                    margin: 6% 0;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        >.button {
+            width: calc(.8*(100% + 40px));
+            margin: 30px auto 0 auto;
+            @media screen and (min-width: $tabwidth){
+                display: inline-block;
+                margin: 7% 0 0 0;
+                width: auto;
+            }
+            a {
+                display: block;
+                padding: 10px 15px;
+                font-size: 18px;
+                text-decoration: none;
+                color: white;
+                background-color: $color__via-red;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.template-via-track {
+    >.header-background-image {
+        background-position: center;
+        background-size: cover;
+        padding: 10% 0;
+        min-height: 300px;
+    }
+    >.row-1 {
+        padding: 20px;
+        text-align: center;
+        @media screen and (min-width: $tabwidth){
+            padding: 4% 4% 6% 4%;
+        }
+        >header {
+            margin: 0 0 20px 0;
+            @media screen and (min-width: $tabwidth){
+                margin: 0;
+            }
+            h1 {
+                font-size: 35px;
+                font-weight: 500;
+                margin: 0;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 50px;
+                }
+                span.red {
+                    color: $color__via-red;
+                }
+            }
+        }
+        >.wrapper {
+            margin: 20px 0;
+            @media screen and (min-width: $tabwidth){
+                @include flexbox();
+                @include flexbox-direction(row);
+                @include flexbox-align-content(center);
+                @include flexbox-align-items(center);
+                @include flexbox-justify(center);
+                margin: 7% 0 6% 0;
+            }
+            >.col-1 {
+                text-align: center;
+                font-size: 25px;
+                font-weight: 300;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 35px;
+                    text-align: right;
+                    width: 50%;
+                }
+            }
+            >.col-2 {
+                margin: 20px 0 0 0;
+                @media screen and (min-width: $tabwidth){
+                    width: 50%;
+                    margin: 0;
+                    padding: 0 4%;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        >.button {
+            margin: 20px auto 0 auto;
+            width: calc(.8*(100% + 40px));
+            @media screen and (min-width: $tabwidth){
+                display: inline-block;
+                width: auto;
+                margin: 6% 0 0 0;
+            }
+            a {
+                display: block;
+                padding: 10px 15px;
+                font-size: 18px;
+                text-decoration: none;
+                color: white;
+                background-color: $color__via-red;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    >.row-2 {
+        background-color: $color__via-green;
+        padding: 20px;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        @media screen and (min-width: $tabwidth){
+            padding: 8% 20%;
+            font-size: 35px;
+        }
+    }
+    >.row-4 {
+        background-color: $color__via-grey;
+        position: relative;
+        padding: 20px 20px 30px 20px;
+        text-align: center;
+        @media screen and (min-width: $tabwidth){
+            padding: 7% 3% 9.2% 3%;
+        }
+        >header {
+            h2 {
+                margin: 0;
+                font-size: 35px;
                 color: white;
                 line-height: 1.1;
                 text-transform: uppercase;
