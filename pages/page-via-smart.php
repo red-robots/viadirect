@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Via
+ * Template Name: Via Smart
  */
 
 get_header(); ?>
@@ -11,7 +11,7 @@ get_header(); ?>
 			<?php
 			if( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'via' );
+				get_template_part( 'template-parts/content', 'via-smart' );
 			endif; // End of the loop.
 			?>
 

@@ -300,7 +300,7 @@
         margin: 20px 0 0 0;
     }
 }
-.template-via {
+.template-via-smart {
     >.row-1 {
         padding: 20px;
         text-align: center;
@@ -370,16 +370,13 @@
         }
         >.col-2 {
             margin: 20px 0 0 0;
-            color: white;
-            font-size: 20px;
-            font-weight: 300;
             @media screen and (min-width: $tabwidth){
                 margin: 0;
                 float: left;
                 width: 70%;
                 font-size: 25px;
             }
-            p {
+            .row {
                 margin: 20px 0;
                 @media screen and (min-width: $tabwidth){
                     margin: 40px 0;
@@ -389,6 +386,30 @@
                 }
                 &:last-child {
                     margin-bottom: 0;
+                }
+                >.col-1 {
+                    font-size: 30px;
+                    width: 30px;
+                    color: white;
+                    display: inline-block;
+                    vertical-align: top;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 60px;
+                        width: 60px;
+                        vertical-align: middle;
+                    }
+                }
+                >.col-2 {
+                    display: inline-block;
+                    width: calc(100% - 40px);
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 300;
+                    vertical-align: top;
+                    @media screen and (min-width: $tabwidth){
+                        width: calc(100% - 70px);
+                        vertical-align: middle;
+                    }
                 }
             }
         }
@@ -464,7 +485,7 @@
         padding: 20px;
         text-align: center;
         @media screen and (min-width: $tabwidth){
-            padding: 6% 0 8% 0;
+            padding: 6% 0;
         }
         >.block-wrapper {
             @media screen and (min-width: $midwidth){
@@ -512,12 +533,34 @@
                 }
             }
         }
+    }
+    >.row-6 {
+        text-align: center;
+        padding: 20px 20px 40px 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 6% 6% 30% 6%;
+        }
+        >.image-wrapper {
+            .image {
+                margin: 20px 0;
+                @media screen and (min-width: $tabwidth){
+                    float: left;
+                    width: 50%;
+                    padding: 0 6%;
+                    margin: 6% 0;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
         >.button {
             width: calc(.8*(100% + 40px));
             margin: 30px auto 0 auto;
             @media screen and (min-width: $tabwidth){
                 display: inline-block;
-                margin: 10% 0 0 0;
+                margin: 7% 0 0 0;
                 width: auto;
             }
             a {

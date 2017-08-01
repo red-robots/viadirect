@@ -9,12 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-via"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-via-smart"); ?>>
 	<?php $row_1_sub_heading = get_field("row_1_sub_heading");
 	$row_2_heading = get_field("row_2_heading");
 	$row_2_copy = get_field("row_2_copy");
 	$row_3_heading = get_field("row_3_heading");
 	$row_4_heading = get_field("row_4_heading");
+	$row_6_images = get_field("row_6_images");
 	$request_demo_text = get_field("request_demo_text");
 	$request_demo_link = get_field("request_demo_link","option");?>
 	<div class="row-1">
@@ -57,8 +58,19 @@
 				<path class="cls-1" d="M23.13,147.11a13.65,13.65,0,0,0-4.13,10v84.95a14.1,14.1,0,0,0,14.16,14.16H174.74a14.1,14.1,0,0,0,14.16-14.16V157.14A14.08,14.08,0,0,0,175.11,143H32.79A13.62,13.62,0,0,0,23.13,147.11Z" transform="translate(-19 -143)"/>
 			</svg>
 		</div><!--.col-1-->
-		<div class="col-2 copy">
-			<?php if($row_2_copy) echo $row_2_copy;?>
+		<div class="col-2">
+			<?php if($row_2_copy):?>
+				<?php foreach($row_2_copy as $row):?>
+					<div class="row">
+						<div class="col-1">
+							<?php if($row['icon']) echo $row['icon'];?>
+						</div><!--.col-1-->
+						<div class="col-2 copy">
+							<?php if($row['copy']) echo $row['copy'];?>
+						</div><!--.col-2-->
+					</div><!--.row-->
+				<?php endforeach;?>
+			<?php endif;?>
 		</div><!--.col-2-->
 	</section><!--.row-2-->
 	<?php if($row_3_heading || ($request_demo_link && $request_demo_text)):?>
@@ -108,6 +120,19 @@
 				<?php endif;
 			endfor;?>
 		</div><!--.box-wrapper-->
+	</section><!--.row-5-->
+	<section class="row-6">
+		<?php if($row_6_images):?>
+			<div class="image-wrapper clear-bottom">
+				<?php foreach($row_6_images as $row):
+					if($row['image']):?>
+						<div class="image js-blocks">
+							<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+						</div><!--image-->
+					<?php endif;
+				 endforeach;?>
+			</div><!--image-wrapper-->
+		<?php endif;?>
 		<?php if($request_demo_link && $request_demo_text):?>
 			<div class="button">
 				<a href="<?php echo $request_demo_link;?>">
@@ -115,5 +140,5 @@
 				</a>
 			</div><!--.button-->
 		<?php endif;?>
-	</section><!--.row-5-->
+	</section><!--.row-6-->
 </article><!-- #post-## -->
