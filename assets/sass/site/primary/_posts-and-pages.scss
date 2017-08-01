@@ -301,6 +301,12 @@
     }
 }
 .template-via-smart {
+    >.header-background-image {
+        background-position: center;
+        background-size: cover;
+        padding: 10% 0;
+        min-height: 300px;
+    }
     >.row-1 {
         padding: 20px;
         text-align: center;

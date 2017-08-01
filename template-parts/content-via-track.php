@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-via-smart"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-via-track"); ?>>
 	<?php $header_background_image = get_field("header_background_image");
 	$row_1_sub_heading = get_field("row_1_sub_heading");
 	$row_2_heading = get_field("row_2_heading");

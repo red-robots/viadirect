@@ -69,9 +69,27 @@
     }
   }
 }
-body.home {
-  #masthead {
-    box-shadow: none;
+body {
+  &.page-id-104, &.page-id-106 {
+    #masthead {
+      @media screen and (min-width: $tabwidth){
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+      }
+    }
+  }
+  &.home {
+    #masthead {
+      box-shadow: none;
+      @media screen and (min-width: $tabwidth){
+        z-index: 20;
+        top: 0;
+        left: 0;
+        position: fixed;
+      }
+    }
   }
 }
 #masthead {
@@ -87,13 +105,7 @@ body.home {
   @include flexbox-align-items(flex-start);
   @include flexbox-justify(flex-start);
   @media screen and (min-width: $tabwidth){
-    padding: 10px 3% 20px 3%;
-    &.home {
-      z-index: 20;
-      top: 0;
-      left: 0;
-      position: fixed;
-    }
+    padding: 10px 3% 30px 3%;
   }
   >.row-1 {
     width: 100%;
