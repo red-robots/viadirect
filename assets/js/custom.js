@@ -24,31 +24,61 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	// tiny helper function to add breakpoints
-	function getGridSize() {
-		return (window.innerWidth < 600) ? 1 :
-			(window.innerWidth < 900) ? 2 : 3 ;
-	}
-	$(window).load(function(){
-		$('.flexslider').flexslider({
-			animation: "slide",
-			itemWidth: 338,
-			itemMargin: 60,
-			minItems: getGridSize(),
-			maxItems: getGridSize(),
-			prevText: '<i class="fa fa-chevron-circle-left"></i>',
-			nextText: '<i class="fa fa-chevron-circle-right"></i>',
-		}); // end register flexslider
-	});
-	// check grid size on resize event
-	$(window).resize(function() {
-		var gridSize = getGridSize();
-		var $flexslider_dom = $('.flexslider');
-		if($flexslider_dom.length===1){
-			var $flexslider = $flexslider_dom.data('flexslider');
-			$flexslider.vars.minItems = gridSize;
-			$flexslider.vars.maxItems = gridSize;
+	if($('body.home').length > 0){
+		function getGridSize() {
+			return (window.innerWidth < 600) ? 1 :
+				(window.innerWidth < 900) ? 2 : 3 ;
 		}
-	});
+		$(window).load(function(){
+			$('.flexslider').flexslider({
+				animation: "slide",
+				itemWidth: 338,
+				itemMargin: 60,
+				minItems: getGridSize(),
+				maxItems: getGridSize(),
+				prevText: '<i class="fa fa-chevron-circle-left"></i>',
+				nextText: '<i class="fa fa-chevron-circle-right"></i>',
+			}); // end register flexslider
+		});
+		// check grid size on resize event
+		$(window).resize(function() {
+			var gridSize = getGridSize();
+			var $flexslider_dom = $('.flexslider');
+			if($flexslider_dom.length===1){
+				var $flexslider = $flexslider_dom.data('flexslider');
+				$flexslider.vars.minItems = gridSize;
+				$flexslider.vars.maxItems = gridSize;
+			}
+		});
+	}
+	if($('body.page-id-104, body.page-id-106').length > 0){
+		function getGridSize() {
+			return (window.innerWidth < 600) ? 1 : 2;
+		}
+		$(window).load(function(){
+			$('.flexslider').flexslider({
+				animation: "slide",
+				itemWidth: 338,
+				itemMargin: 60,
+				minItems: getGridSize(),
+				maxItems: getGridSize(),
+				controlNav: false,
+				smoothHeight: true,
+				prevText: '<i class="fa fa-chevron-circle-left"></i>',
+				nextText: '<i class="fa fa-chevron-circle-right"></i>',
+			}); // end register flexslider
+		});
+		// check grid size on resize event
+		$(window).resize(function() {
+			var gridSize = getGridSize();
+			var $flexslider_dom = $('.flexslider');
+			if($flexslider_dom.length===1){
+				var $flexslider = $flexslider_dom.data('flexslider');
+				$flexslider.vars.minItems = gridSize;
+				$flexslider.vars.maxItems = gridSize;
+			}
+		});
+	}
 	
 	/*
 	*
@@ -60,7 +90,22 @@ jQuery(document).ready(function ($) {
 		width: '80%', 
 		height: '80%'
 	});
-	
+
+	$('a.popup').colorbox({
+		rel: 'gal',
+		inline: true,
+		width: '90%',
+		maxWidth: '960px',
+		close: '<i class="fa fa-times"></i>',
+		previous: '<i class="fa fa-chevron-left"></i>',
+		next: '<i class="fa fa-chevron-right"></i>'
+	});
+    $(window).on('resize', function () {
+        var width = window.innerWidth * 0.9 > 960 ? '960px' : '90%';
+        $.colorbox.resize({
+            width: width,
+        });
+	});
 	/*
 	*
 	*	Isotope with Images Loaded

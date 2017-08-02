@@ -544,20 +544,24 @@
         text-align: center;
         padding: 20px 20px 40px 20px;
         @media screen and (min-width: $tabwidth){
-            padding: 6% 6% 30% 6%;
+            width: calc(96% - 100px);
+            padding: 2% 2% 6% 2%;
+            margin: 0 auto;
         }
-        >.image-wrapper {
-            .image {
-                margin: 20px 0;
-                @media screen and (min-width: $tabwidth){
-                    float: left;
-                    width: 50%;
-                    padding: 0 6%;
-                    margin: 6% 0;
-                }
-                img {
-                    width: 100%;
-                    display: block;
+        >.image-wrapper.flexslider {
+            .slides {
+                .slide {
+                    margin: 0 60px 0 0;
+                    &:last-child {
+                        margin: 0;
+                    }
+                    >img {
+                        width: 100%;
+                        display: block;
+                    }
+                    .hidden {
+                        display: none;
+                    }
                 }
             }
         }
@@ -566,7 +570,7 @@
             margin: 30px auto 0 auto;
             @media screen and (min-width: $tabwidth){
                 display: inline-block;
-                margin: 7% 0 0 0;
+                margin: 2% 0 0 0;
                 width: auto;
             }
             a {
@@ -713,7 +717,7 @@
         padding: 20px;
         text-align: center;
         @media screen and (min-width: $tabwidth){
-            padding: 6% 0;
+            padding: 6% 0 4% 0;
         }
         >.block-wrapper {
             @media screen and (min-width: $midwidth){
@@ -766,20 +770,24 @@
         text-align: center;
         padding: 20px 20px 40px 20px;
         @media screen and (min-width: $tabwidth){
-            padding: 6% 6% 30% 6%;
+            width: calc(96% - 100px);
+            padding: 2% 2% 6% 2%;
+            margin: 0 auto;
         }
-        >.image-wrapper {
-            .image {
-                margin: 20px 0;
-                @media screen and (min-width: $tabwidth){
-                    float: left;
-                    width: 50%;
-                    padding: 0 6%;
-                    margin: 6% 0;
-                }
-                img {
-                    width: 100%;
-                    display: block;
+        >.image-wrapper.flexslider {
+            .slides {
+                .slide {
+                    margin: 0 60px 0 0;
+                    &:last-child {
+                        margin: 0;
+                    }
+                    >img {
+                        width: 100%;
+                        display: block;
+                    }
+                    .hidden {
+                        display: none;
+                    }
                 }
             }
         }
@@ -788,7 +796,7 @@
             margin: 30px auto 0 auto;
             @media screen and (min-width: $tabwidth){
                 display: inline-block;
-                margin: 7% 0 0 0;
+                margin: 2% 0 0 0;
                 width: auto;
             }
             a {

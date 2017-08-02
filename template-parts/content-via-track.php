@@ -82,14 +82,23 @@
 	</section><!--.row-5-->
 	<section class="row-6">
 		<?php if($row_6_images):?>
-			<div class="image-wrapper clear-bottom">
-				<?php foreach($row_6_images as $row):
-					if($row['image']):?>
-						<div class="image js-blocks">
-							<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
-						</div><!--image-->
-					<?php endif;
-				 endforeach;?>
+			<div class="image-wrapper flexslider">
+				<ul class="slides">
+					<?php foreach($row_6_images as $row):
+						if($row['image']):?>
+							<li class="slide">
+								<a href="#<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>" class="popup">
+									<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+								</a>
+								<div class="hidden">
+									<div class="img-popup" id="<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>">
+										<img src="<?php echo $row['image']['url'];?>" alt="<?php echo $row['image']['alt'];?>">
+									</div><!--.popup-->
+								</div><!--.hidden-->
+							</li><!--image-->
+						<?php endif;
+					endforeach;?>
+				 </ul><!--.slides-->
 			</div><!--image-wrapper-->
 		<?php endif;?>
 		<?php if($request_demo_link && $request_demo_text):?>
