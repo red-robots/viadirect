@@ -105,6 +105,7 @@ body {
   @include flexbox-align-items(flex-start);
   @include flexbox-justify(flex-start);
   @media screen and (min-width: $tabwidth){
+    overflow: visible;
     padding: 10px 3% 30px 3%;
   }
   >.row-1 {
@@ -228,6 +229,12 @@ body {
             list-style-type: none;
             margin: 10px 0;
             display: block;
+            position: relative;
+            &:hover {
+              >ul.sub-menu {
+                display: block;
+              }
+            }
             @media screen and (min-width: $tabwidth){
               display: inline-block;
               line-height: 2.0;
@@ -243,6 +250,43 @@ body {
               }
               &:hover {
                 color: $color__via-red;
+              }
+            } 
+            ul.sub-menu {
+              width: 100%;
+              @media screen and (min-width: $tabwidth){
+                padding: 10px;
+                display: none;
+                background-color: $color__via-green;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                
+              }
+              li {
+                display: block;
+                line-height: 1.2;
+                margin: 10px 0 0 0;
+                padding: 0;
+                &:first-child {
+                  margin: 0;
+                }
+                @media screen and (min-width: $tabwidth){
+                  text-align: left;
+                }
+                a {
+                  color: $color__via-grey;
+                  font-size: 16px;
+                  &:hover {
+                    color: $color__via-red;
+                  }
+                  @media screen and (min-width: $tabwidth){
+                    color: white;
+                    &:hover {
+                      color: $color__via-grey;
+                    }
+                  }
+                }
               }
             }
           }
@@ -264,6 +308,7 @@ body {
         padding: 10px 15px;
         text-decoration: none;
         background-color: $color__via-red;
+        word-break: break-all;
         color: white;
         font-size: 18px;
         &:hover {
