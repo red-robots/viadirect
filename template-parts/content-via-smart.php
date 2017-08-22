@@ -128,6 +128,7 @@
 		</div><!--.box-wrapper-->
 	</section><!--.row-5-->
 	<section class="row-6">
+		<a name="sample"></a>
 		<?php if($row_6_images):?>
 			<div class="image-wrapper flexslider">
 				<ul class="slides">
