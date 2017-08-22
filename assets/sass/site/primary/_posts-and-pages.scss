@@ -240,38 +240,45 @@
                     &:last-child {
                         margin: 0;
                     }
-                    .wrapper {
-                        @include flexbox();
-                        @include flexbox-direction(column);
-                        @include flexbox-align-content(center);
-                        @include flexbox-align-items(center);
-                        @include flexbox-justify(flex-start);
-                        background-color: white;
-                        padding: 30px;
-                        .copy {
-                            width: 100%;
-                            text-align: center;
-                            font-size: 14px;
-                            margin: 0 0 20px 0;
-                        }
-                        .spacer {
-                            margin: auto auto 0 auto;
-                            width: 100px;
-                            border-top: 1px solid $color__via-grey;
-                        }
-                        header {
-                            margin: 20px 0 0 0;
-                            text-align: center;
-                            h2 {
-                                margin: 0;
-                                font-size: 16px;
-                                color: black;
-                            }
-                            h3 {
-                                margin: 0;
-                                font-weight: 500;
+                    * {
+                        box-sizing: border-box;
+                    }
+                    >.wrapper {
+                        padding: 8px;
+                        border: 1px solid $color__via-red;
+                        >.wrapper {
+                            @include flexbox();
+                            @include flexbox-direction(column);
+                            @include flexbox-align-content(center);
+                            @include flexbox-align-items(center);
+                            @include flexbox-justify(flex-start);
+                            background-color: white;
+                            padding: 30px;
+                            .copy {
+                                width: 100%;
+                                text-align: center;
                                 font-size: 14px;
-                                color: $color__via-grey;
+                                margin: 0 0 20px 0;
+                            }
+                            .spacer {
+                                margin: auto auto 0 auto;
+                                width: 100px;
+                                border-top: 1px solid $color__via-grey;
+                            }
+                            header {
+                                margin: 20px 0 0 0;
+                                text-align: center;
+                                h2 {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    color: black;
+                                }
+                                h3 {
+                                    margin: 0;
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    color: $color__via-grey;
+                                }
                             }
                         }
                     }
