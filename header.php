@@ -26,6 +26,15 @@
 		<div class="row-1">
 			<?php wp_nav_menu( array( 'theme_location' => 'header') ); 
 			//todo insert form?>
+			<?php $request_demo_text = get_field("request_demo_text","option");
+			$request_demo_link = get_field("request_demo_link","option");
+			if($request_demo_link&&$request_demo_text):?>
+				<div class="button">
+					<a href="<?php echo $request_demo_link;?>">
+						<?php echo $request_demo_text;?>
+					</a>
+				</div><!--.button-->
+			<?php endif;?>
 		</div><!-- row-1 -->
 		<div class="row-2">
 			<?php if(is_home()) { ?>
@@ -42,15 +51,7 @@
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-			<?php $request_demo_text = get_field("request_demo_text","option");
-			$request_demo_link = get_field("request_demo_link","option");
-			if($request_demo_link&&$request_demo_text):?>
-				<div class="col-3">
-					<a href="<?php echo $request_demo_link;?>">
-						<?php echo $request_demo_text;?>
-					</a>
-				</div><!--.col-3-->
-			<?php endif;?>
+			
 		</div><!-- row-2 -->
 	</header><!-- #masthead -->
 

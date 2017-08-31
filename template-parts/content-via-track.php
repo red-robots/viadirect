@@ -25,7 +25,9 @@
 	?>></div><!--.header-background-image-->
 	<div class="row-1">
 		<header>
-			<h1><?php the_title();?></h1>
+			<div class="wrapper">
+				<h1><?php the_title();?></h1>
+			</div><!--.wrapper-->
 		</header>
 		<div class="wrapper clear-bottom">
 			<div class="col-1 copy">
@@ -64,12 +66,14 @@
 				$copy = get_field("row_5_col_{$i}_copy");
 				if($heading || $icon || $copy):?>
 					<div class="block js-blocks">
-						<?php if($icon) echo $icon;?>
-						<?php if($heading):?>
-							<header>
-								<h3><?php echo $heading;?></h3>
-							</header>
-						<?php endif;?>
+						<div class="wrapper">
+							<?php if($icon) echo $icon;?>
+							<?php if($heading):?>
+								<header>
+									<h3><?php echo $heading;?></h3>
+								</header>
+							<?php endif;?>
+						</div><!--.wrapper-->
 						<?php if($copy):?>
 							<div class="copy">
 								<?php echo $copy;?>

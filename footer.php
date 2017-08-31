@@ -27,11 +27,11 @@
 				<?php endif;?>
 			</div><!--.col-1-->
 			<div class="col-2">
-				<?php $facebook_link = get_field("facebook_link","option");
+				<?php $twitter_link = get_field("twitter_link","option");
 				$linkedin_link = get_field("linkedin_link","option");
-				if($facebook_link):?>
-					<a href="<?php echo $facebook_link;?>">
-						<i class="fa fa-facebook"></i>
+				if($twitter_link):?>
+					<a href="<?php echo $twitter_link;?>">
+						<i class="fa fa-twitter"></i>
 					</a>
 				<?php endif;
 				if($linkedin_link):?>
