@@ -111,28 +111,30 @@
                 <header><h2><?php echo $row_4_title;?></h2></header>
                 <div class="spacer"></div>
             <?php endif;?>
-            <div class="testimonials flexslider">
+            <div id="flexslider" class="testimonials flexslider">
                 <ul class="slides">
                     <?php while($query->have_posts()): $query->the_post();?>
                         <li>
                             <div class="wrapper">
                                 <div class="wrapper">
-                                    <div class="copy">
-                                        <?php the_content();?>
-                                    </div><!--.copy-->
-                                    <?php $title = get_field("title");
-                                    $name = get_field("name");
-                                    if($name || $title):?>
-                                        <div class="spacer"></div><!--.spacer-->
-                                        <header>
-                                            <?php if($name):?>
-                                                <h2><?php echo $name;?></h2>
-                                            <?php endif;
-                                            if($title):?>
-                                                <h3><?php echo $title;?></h3>
-                                            <?php endif;?>
-                                        </header>  
-                                    <?php endif;?>
+                                    <div class="wrapper">
+                                        <div class="copy">
+                                            <?php the_content();?>
+                                        </div><!--.copy-->
+                                        <?php $title = get_field("title");
+                                        $name = get_field("name");
+                                        if($name || $title):?>
+                                            <div class="spacer"></div><!--.spacer-->
+                                            <header>
+                                                <?php if($name):?>
+                                                    <h2><?php echo $name;?></h2>
+                                                <?php endif;
+                                                if($title):?>
+                                                    <h3><?php echo $title;?></h3>
+                                                <?php endif;?>
+                                            </header>  
+                                        <?php endif;?>
+                                    </div><!--.wrapper-->
                                 </div><!--.wrapper-->
                             </div><!--.wrapper-->
                         </li>

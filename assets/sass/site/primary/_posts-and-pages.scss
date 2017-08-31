@@ -63,6 +63,11 @@
                         }
                     }
                     >.wrapper {
+                        @include flexbox();
+                        @include flexbox-direction(column);
+                        @include flexbox-align-content(stretch);
+                        @include flexbox-align-items(stretch);
+                        @include flexbox-justify(flex-start);
                         height: 100%;
                         background-color: white;
                         padding: 15px 30px 10px 30px;
@@ -82,7 +87,7 @@
                             }
                         }
                         .copy {
-                            margin: 15px 0 0 0;
+                            margin: 15px 0 50px 0;
                             font-size: 14px;
                             color: black;
                             @media screen and (min-width: $tabwidth){
@@ -92,7 +97,7 @@
                         }
                         a.link {
                             display: block;
-                            margin: 50px 0 0 0;
+                            margin: auto 0 0 0;
                             text-align: center;
                             padding: 10px;
                             color: white;
@@ -244,40 +249,46 @@
                         box-sizing: border-box;
                     }
                     >.wrapper {
-                        padding: 8px;
-                        border: 1px solid $color__via-red;
+                        padding: 1px;
+                        height: 100%;
                         >.wrapper {
-                            @include flexbox();
-                            @include flexbox-direction(column);
-                            @include flexbox-align-content(center);
-                            @include flexbox-align-items(center);
-                            @include flexbox-justify(flex-start);
-                            background-color: white;
-                            padding: 30px;
-                            .copy {
-                                width: 100%;
-                                text-align: center;
-                                font-size: 14px;
-                                margin: 0 0 20px 0;
-                            }
-                            .spacer {
-                                margin: auto auto 0 auto;
-                                width: 100px;
-                                border-top: 1px solid $color__via-grey;
-                            }
-                            header {
-                                margin: 20px 0 0 0;
-                                text-align: center;
-                                h2 {
-                                    margin: 0;
-                                    font-size: 16px;
-                                    color: black;
-                                }
-                                h3 {
-                                    margin: 0;
-                                    font-weight: 500;
+                            padding: 8px;
+                            border: 1px solid white;
+                            height: 100%;
+                            >.wrapper {
+                                height: 100%;
+                                @include flexbox();
+                                @include flexbox-direction(column);
+                                @include flexbox-align-content(center);
+                                @include flexbox-align-items(center);
+                                @include flexbox-justify(flex-start);
+                                background-color: white;
+                                padding: 30px;
+                                .copy {
+                                    width: 100%;
+                                    text-align: center;
                                     font-size: 14px;
-                                    color: $color__via-grey;
+                                    margin: 0 0 20px 0;
+                                }
+                                .spacer {
+                                    margin: auto auto 0 auto;
+                                    width: 100px;
+                                    border-top: 1px solid $color__via-grey;
+                                }
+                                header {
+                                    margin: 20px 0 0 0;
+                                    text-align: center;
+                                    h2 {
+                                        margin: 0;
+                                        font-size: 16px;
+                                        color: black;
+                                    }
+                                    h3 {
+                                        margin: 0;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        color: $color__via-grey;
+                                    }
                                 }
                             }
                         }

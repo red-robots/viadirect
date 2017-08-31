@@ -38,6 +38,14 @@ jQuery(document).ready(function ($) {
 				maxItems: getGridSize(),
 				prevText: '<i class="fa fa-chevron-circle-left"></i>',
 				nextText: '<i class="fa fa-chevron-circle-right"></i>',
+				start: function(){
+					var height = 0;
+					$('#flexslider ul.slides li > .wrapper').each(function(){
+						var $this = $(this);
+						height = $this.outerHeight() > height ? $this.outerHeight() : height;
+					});
+					$('#flexslider ul.slides li').height(height);
+				}
 			}); // end register flexslider
 		});
 		// check grid size on resize event
@@ -79,7 +87,8 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	}
-	
+
+
 	/*
 	*
 	*	Colorbox
