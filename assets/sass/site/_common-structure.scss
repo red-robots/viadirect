@@ -141,6 +141,13 @@ body {
           &:first-child {
             margin: 0 0 10px 0;
           }
+          &#menu-item-252 {
+            background-color: $color__via-gold;
+            padding: 0 5px;
+            a {
+              color: white;
+            }
+          }
           @media screen and (min-width: $tabwidth){
             display: inline-block;
             margin: 0 5px;
@@ -170,7 +177,7 @@ body {
       @media screen and (min-width: $tabwidth){
         display: inline-block;
         width: 20%;
-        margin: 0;
+        margin: 0 0 0 40px;
         order: 3;
       }
       a {
@@ -226,6 +233,7 @@ body {
       order: 3;
       @media screen and (min-width: $tabwidth){
         order: 2;
+        width: auto;
       }
       &.toggled {
         .menu-primary-container {
@@ -269,6 +277,11 @@ body {
               display: inline-block;
               line-height: 2.0;
               margin: 0 20px;
+            }
+            &:last-child {
+              @media screen and (min-width: $tabwidth){
+                margin-right: 0;
+              }
             }
             a {
               text-decoration: none;
