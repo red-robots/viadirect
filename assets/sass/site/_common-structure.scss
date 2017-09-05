@@ -298,21 +298,27 @@ body {
             ul.sub-menu {
               width: 100%;
               @media screen and (min-width: $tabwidth){
-                padding: 10px;
                 display: none;
-                background-color: $color__via-green;
+                background-color: white;
                 position: absolute;
                 top: 100%;
                 left: 0;
-                
+                padding: 10px 0 0 0;
+                border-top: 4px solid $color__via-red;
+                background-image: url('./images/red-arrow.png');
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: 20px;
               }
               li {
+                cursor: pointer;
                 display: block;
                 line-height: 1.2;
-                margin: 10px 0 0 0;
-                padding: 0;
-                &:first-child {
-                  margin: 0;
+                padding: 10px 5px 5px 20px;
+                border-bottom: 2px solid lightgrey;
+                margin: 0;
+                &:last-child {
+                  border-bottom: none;
                 }
                 @media screen and (min-width: $tabwidth){
                   text-align: left;
@@ -320,11 +326,12 @@ body {
                 a {
                   color: $color__via-grey;
                   font-size: 16px;
+                  font-weight: 500;
                   &:hover {
                     color: $color__via-red;
                   }
                   @media screen and (min-width: $tabwidth){
-                    color: white;
+                    color: $color__via-grey;
                     &:hover {
                       color: $color__via-grey;
                     }
