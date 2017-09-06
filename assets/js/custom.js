@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
 	}
 	if($('body.page-id-104, body.page-id-106').length > 0){
 		function getGridSize() {
-			return (window.innerWidth < 600) ? 1 : 2;
+			return (window.innerWidth < 600) ? 1 : 4;
 		}
 		$(window).load(function(){
 			$('.flexslider').flexslider({
@@ -71,7 +71,6 @@ jQuery(document).ready(function ($) {
 				minItems: getGridSize(),
 				maxItems: getGridSize(),
 				controlNav: false,
-				smoothHeight: true,
 				prevText: '<i class="fa fa-chevron-circle-left"></i>',
 				nextText: '<i class="fa fa-chevron-circle-right"></i>',
 			}); // end register flexslider

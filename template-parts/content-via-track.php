@@ -93,7 +93,9 @@
 						if($row['image']):?>
 							<li class="slide">
 								<a href="#<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>" class="popup">
-									<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+									<div class="wrapper">
+										<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+									</div><!--.wrapper-->
 								</a>
 								<div class="hidden">
 									<div class="img-popup" id="<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>">

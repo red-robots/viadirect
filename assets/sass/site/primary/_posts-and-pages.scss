@@ -595,9 +595,18 @@
                     &:last-child {
                         margin: 0;
                     }
-                    >img {
-                        width: 100%;
+                    a {
                         display: block;
+                        padding: 5px;
+                        >.wrapper {
+                            padding: 8px;
+                            border: 1px solid black;
+                            box-shadow: 2px 2px 5px black;
+                            >img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
                     }
                     .hidden {
                         display: none;
@@ -843,9 +852,18 @@
                     &:last-child {
                         margin: 0;
                     }
-                    >img {
-                        width: 100%;
+                    a {
                         display: block;
+                        padding: 5px;
+                        >.wrapper {
+                            padding: 8px;
+                            border: 1px solid black;
+                            box-shadow: 2px 2px 5px black;
+                            >img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
                     }
                     .hidden {
                         display: none;

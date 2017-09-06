@@ -143,8 +143,12 @@ body {
           }
           &#menu-item-252 {
             background-color: $color__via-gold;
-            padding: 0 5px;
+            padding: 10px 5px;
+            @media screen and (min-width: $tabwidth){
+              padding: 0 5px;
+            }
             a {
+              display: block;
               color: white;
             }
           }
@@ -315,12 +319,12 @@ body {
                 display: block;
                 line-height: 1.2;
                 padding: 10px 5px 5px 20px;
-                border-bottom: 2px solid lightgrey;
                 margin: 0;
                 &:last-child {
                   border-bottom: none;
                 }
                 @media screen and (min-width: $tabwidth){
+                  border-bottom: 2px solid lightgrey;
                   text-align: left;
                 }
                 a {
