@@ -886,7 +886,7 @@ html[xmlns] .flexslider .slides{display:block}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper{padding:8px;border:1px solid white;height:100%}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper{height:100%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;background-color:white;padding:30px}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper .copy{width:100%;text-align:center;font-size:14px;margin:0 0 20px 0}
-.template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper .spacer{margin:auto auto 0 auto;width:100px;border-top:1px solid #535353}
+.template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper .spacer{margin:auto auto 0 auto;width:70%;border-top:1px dashed #535353}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper header{margin:20px 0 0 0;text-align:center}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper header h2{margin:0;font-size:16px;color:black}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper header h3{margin:0;font-weight:500;font-size:14px;color:#535353}
