@@ -25,17 +25,17 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	// tiny helper function to add breakpoints
 	if($('body.home').length > 0){
-		function getGridSize() {
+		function getGridSize_home() {
 			return (window.innerWidth < 600) ? 1 :
 				(window.innerWidth < 900) ? 2 : 3 ;
 		}
 		$(window).load(function(){
-			$('.flexslider').flexslider({
+			$('.flexslider.home').flexslider({
 				animation: "slide",
 				itemWidth: 338,
 				itemMargin: 60,
-				minItems: getGridSize(),
-				maxItems: getGridSize(),
+				minItems: getGridSize_home(),
+				maxItems: getGridSize_home(),
 				prevText: '<i class="fa fa-chevron-circle-left"></i>',
 				nextText: '<i class="fa fa-chevron-circle-right"></i>',
 				start: function(){
@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
 		});
 		// check grid size on resize event
 		$(window).resize(function() {
-			var gridSize = getGridSize();
-			var $flexslider_dom = $('.flexslider');
+			var gridSize = getGridSize_home();
+			var $flexslider_dom = $('.flexslider.home');
 			if($flexslider_dom.length===1){
 				var $flexslider = $flexslider_dom.data('flexslider');
 				$flexslider.vars.minItems = gridSize;
@@ -60,16 +60,16 @@ jQuery(document).ready(function ($) {
 		});
 	}
 	if($('body.page-id-104, body.page-id-106').length > 0){
-		function getGridSize() {
+		function getGridSize_inner() {
 			return (window.innerWidth < 600) ? 1 : 4;
 		}
 		$(window).load(function(){
-			$('.flexslider').flexslider({
+			$('.flexslider.inner').flexslider({
 				animation: "slide",
 				itemWidth: 338,
 				itemMargin: 60,
-				minItems: getGridSize(),
-				maxItems: getGridSize(),
+				minItems: getGridSize_inner(),
+				maxItems: getGridSize_inner(),
 				controlNav: false,
 				prevText: '<i class="fa fa-chevron-circle-left"></i>',
 				nextText: '<i class="fa fa-chevron-circle-right"></i>',
@@ -77,8 +77,8 @@ jQuery(document).ready(function ($) {
 		});
 		// check grid size on resize event
 		$(window).resize(function() {
-			var gridSize = getGridSize();
-			var $flexslider_dom = $('.flexslider');
+			var gridSize = getGridSize_inner();
+			var $flexslider_dom = $('.flexslider.inner');
 			if($flexslider_dom.length===1){
 				var $flexslider = $flexslider_dom.data('flexslider');
 				$flexslider.vars.minItems = gridSize;

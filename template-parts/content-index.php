@@ -111,7 +111,7 @@
                 <header><h2><?php echo $row_4_title;?></h2></header>
                 <div class="spacer"></div>
             <?php endif;?>
-            <div id="flexslider" class="testimonials flexslider">
+            <div id="flexslider" class="testimonials flexslider home">
                 <ul class="slides">
                     <?php while($query->have_posts()): $query->the_post();?>
                         <li>
