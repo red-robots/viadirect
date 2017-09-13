@@ -61,7 +61,8 @@ jQuery(document).ready(function ($) {
 	}
 	if($('body.page-id-104, body.page-id-106').length > 0){
 		function getGridSize_inner() {
-			return (window.innerWidth < 600) ? 1 : 4;
+			return (window.innerWidth < 600) ? 1 : 
+			(window.innerWidth < 900) ? 2 : 4 ;
 		}
 		$(window).load(function(){
 			$('.flexslider.inner').flexslider({

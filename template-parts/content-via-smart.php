@@ -114,18 +114,20 @@
 				if($heading || $icon || $copy):?>
 					<div class="block js-blocks">
 						<div class="wrapper">
-							<?php if($icon) echo $icon;?>
-							<?php if($heading):?>
-								<header>
-									<h3><?php echo $heading;?></h3>
-								</header>
+							<div class="wrapper">
+								<?php if($icon) echo $icon;?>
+								<?php if($heading):?>
+									<header>
+										<h3><?php echo $heading;?></h3>
+									</header>
+								<?php endif;?>
+							</div><!--.wrapper-->
+							<?php if($copy):?>
+								<div class="copy">
+									<?php echo $copy;?>
+								</div><!--.copy-->
 							<?php endif;?>
 						</div><!--.wrapper-->
-						<?php if($copy):?>
-							<div class="copy">
-								<?php echo $copy;?>
-							</div><!--.copy-->
-						<?php endif;?>
 					</div><!--.box-->
 				<?php endif;
 			endfor;?>
