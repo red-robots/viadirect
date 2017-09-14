@@ -148,8 +148,10 @@ jQuery(document).ready(function ($) {
 		if($('#site-navigation').hasClass('toggled')){
 			$('#site-navigation').removeClass('toggled');
 			$('#masthead >.row-1').removeClass('toggled');
+			$('#masthead >.row-2').removeClass('toggled');
 		} else {
 			$('#masthead >.row-1').addClass('toggled');
+			$('#masthead >.row-2').addClass('toggled');
 			$('#site-navigation').addClass('toggled');
 		}
 	});
