@@ -473,10 +473,8 @@
         }
         .button {
             margin: 20px auto 0 auto;
-            width: calc(.8*(100% + 40px));
+            display: inline-block;
             @media screen and (min-width: $tabwidth){
-                display: inline-block;
-                width: auto;
                 margin: 6% 0 0 0;
             }
             a {
@@ -594,44 +592,52 @@
     >.row-6 {
         text-align: center;
         padding: 20px 20px 40px 20px;
-        @media screen and (min-width: $tabwidth){
-            width: calc(96% - 100px);
-            padding: 2% 2% 6% 2%;
+        @media screen and (min-width: $midwidth){
+            padding: 2% 0 6% 0;
             margin: 0 auto;
         }
-        >.image-wrapper.flexslider {
-            .slides {
-                .slide {
-                    margin: 0 60px 0 0;
-                    &:last-child {
-                        margin: 0;
+        >.image-wrapper {
+            @media screen and (min-width: $midwidth){
+                padding: 0 1.04%;
+            }
+            .slide {
+                width: 100%;
+                margin: 20px 0 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                @media screen and (min-width: $midwidth){
+                    width: 1/4*84%;
+                    margin: 0 2%;
+                    float: left;
+                    display: block;
+                    &:first-child {
+                        margin: 0 2%;
                     }
-                    a {
-                        display: block;
-                        padding: 5px;
-                        >.wrapper {
-                            padding: 8px;
-                            border: 1px solid black;
-                            box-shadow: 2px 2px 5px darkgrey;
-                            >img {
-                                width: 100%;
-                                display: block;
-                            }
+                }
+                a {
+                    display: block;
+                    padding: 5px;
+                    >.wrapper {
+                        padding: 8px;
+                        border: 1px solid black;
+                        box-shadow: 2px 2px 5px darkgrey;
+                        >img {
+                            width: 100%;
+                            display: block;
                         }
                     }
-                    .hidden {
-                        display: none;
-                    }
+                }
+                .hidden {
+                    display: none;
                 }
             }
         }
         >.button {
-            width: calc(.8*(100% + 40px));
+            display: inline-block;
             margin: 30px auto 0 auto;
             @media screen and (min-width: $tabwidth){
-                display: inline-block;
-                margin: 2% 0 0 0;
-                width: auto;
+                margin: 4% 0 0 0;
             }
             a {
                 display: block;
@@ -727,10 +733,8 @@
         }
         >.button {
             margin: 20px auto 0 auto;
-            width: calc(.8*(100% + 40px));
+            display: inline-block;
             @media screen and (min-width: $tabwidth){
-                display: inline-block;
-                width: auto;
                 margin: 6% 0 0 0;
             }
             a {
@@ -859,44 +863,52 @@
     >.row-6 {
         text-align: center;
         padding: 20px 20px 40px 20px;
-        @media screen and (min-width: $tabwidth){
-            width: calc(96% - 100px);
-            padding: 2% 2% 6% 2%;
+        @media screen and (min-width: $midwidth){
+            padding: 2% 0 6% 0;
             margin: 0 auto;
         }
-        >.image-wrapper.flexslider {
-            .slides {
-                .slide {
-                    margin: 0 60px 0 0;
-                    &:last-child {
-                        margin: 0;
+        >.image-wrapper {
+            @media screen and (min-width: $midwidth){
+                padding: 0 1.04%;
+            }
+            .slide {
+                width: 100%;
+                margin: 20px 0 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                @media screen and (min-width: $midwidth){
+                    width: 1/4*84%;
+                    margin: 0 2%;
+                    float: left;
+                    display: block;
+                    &:first-child {
+                        margin: 0 2%;
                     }
-                    a {
-                        display: block;
-                        padding: 5px;
-                        >.wrapper {
-                            padding: 8px;
-                            border: 1px solid black;
-                            box-shadow: 2px 2px 5px darkgrey;
-                            >img {
-                                width: 100%;
-                                display: block;
-                            }
+                }
+                a {
+                    display: block;
+                    padding: 5px;
+                    >.wrapper {
+                        padding: 8px;
+                        border: 1px solid black;
+                        box-shadow: 2px 2px 5px darkgrey;
+                        >img {
+                            width: 100%;
+                            display: block;
                         }
                     }
-                    .hidden {
-                        display: none;
-                    }
+                }
+                .hidden {
+                    display: none;
                 }
             }
         }
         >.button {
-            width: calc(.8*(100% + 40px));
+            display: inline-block;
             margin: 30px auto 0 auto;
             @media screen and (min-width: $tabwidth){
-                display: inline-block;
-                margin: 2% 0 0 0;
-                width: auto;
+                margin: 4% 0 0 0;
             }
             a {
                 display: block;

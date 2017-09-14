@@ -89,25 +89,23 @@
 	<section class="row-6">
 		<a name="sample"></a>
 		<?php if($row_6_images):?>
-			<div class="image-wrapper flexslider inner">
-				<ul class="slides">
-					<?php foreach($row_6_images as $row):
-						if($row['image']):?>
-							<li class="slide">
-								<a href="#<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>" class="popup">
-									<div class="wrapper">
-										<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
-									</div><!--.wrapper-->
-								</a>
-								<div class="hidden">
-									<div class="img-popup" id="<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>">
-										<img src="<?php echo $row['image']['url'];?>" alt="<?php echo $row['image']['alt'];?>">
-									</div><!--.popup-->
-								</div><!--.hidden-->
-							</li><!--image-->
-						<?php endif;
-					endforeach;?>
-				 </ul><!--.slides-->
+			<div class="image-wrapper clear-bottom">
+				<?php foreach($row_6_images as $row):
+					if($row['image']):?>
+						<div class="slide js-blocks">
+							<a href="#<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>" class="popup">
+								<div class="wrapper">
+									<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+								</div><!--.wrapper-->
+							</a>
+							<div class="hidden">
+								<div class="img-popup" id="<?php echo preg_replace("/[^0-9A-Za-z]/","",$row['image']['url']);?>">
+									<img src="<?php echo $row['image']['url'];?>" alt="<?php echo $row['image']['alt'];?>">
+								</div><!--.popup-->
+							</div><!--.hidden-->
+						</div><!--image-->
+					<?php endif;
+				endforeach;?>
 			</div><!--image-wrapper-->
 		<?php endif;?>
 		<?php if($request_demo_link && $request_demo_text):?>

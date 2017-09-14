@@ -26,6 +26,9 @@ endif;?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
+		<div class="mobile">
+			<?php wp_nav_menu( array( 'theme_location' => 'mobile') ); ?>
+		</div><!--.mobile-->
 		<div class="row-1">
 			<?php wp_nav_menu( array( 'theme_location' => 'header') ); 
 			//todo insert form?>

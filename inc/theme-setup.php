@@ -40,6 +40,7 @@ function acstarter_setup() {
     'header' => esc_html__( 'Header', 'acstarter' ),
     'footer' => esc_html__( 'Footer', 'acstarter' ),
     'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
+    'mobile' => esc_html__( 'Mobile', 'acstarter' ),
   ) );
 
   /*
