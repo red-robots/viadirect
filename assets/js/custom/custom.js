@@ -155,6 +155,13 @@ jQuery(document).ready(function ($) {
 			$('#site-navigation').addClass('toggled');
 		}
 	});
+	$('#masthead .mid-size-button').click(function(){
+		if($('#site-navigation-mid').hasClass('toggled-mid')){
+			$('#site-navigation-mid').removeClass('toggled-mid');
+		} else {
+			$('#site-navigation-mid').addClass('toggled-mid');
+		}
+	});
 
 	$(window).load(function(){
 		if($('.svg').length>0){

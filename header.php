@@ -57,8 +57,11 @@ endif;?>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-			
+			<div class="mid-size-button"><i class="fa fa-bars"></i></div>	
 		</div><!-- row-2 -->
+		<nav id="site-navigation-mid" class="row-3">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">

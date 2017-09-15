@@ -239,6 +239,7 @@ body {
         }
         &:hover {
           color: white;
+          background-color: $color__via-red-hover;
         }
       }
     }
@@ -261,8 +262,12 @@ body {
       @include flexbox-align-items(flex-end);
       @include flexbox-direction(row);
       @include flexbox-justify(space-between);
+      @include flexbox-wrap(wrap);
       order: 2;
       padding: 0;
+    }
+    @media screen and (min-width: $midwidth){
+      @include flexbox-wrap(no-wrap);
     }
     .logo {
       margin: 0;
@@ -289,8 +294,13 @@ body {
       width: 100%;
       order: 3;
       @media screen and (min-width: $midwidth){
-        order: 2;
+        display: none;
         width: auto;
+        order: 3;
+      }
+      @media screen and (min-width: $deskwidth){
+        display: block;
+        order: 2;
       }
       &.toggled {
         .menu-primary-container {
@@ -310,10 +320,13 @@ body {
         @media screen and (min-width: $midwidth){
           display: none;
         }
+        &:hover {
+          background-color: $color__via-red-hover;
+        }
       }
       .menu-primary-container {
         display: none;
-        @media screen and (min-width: $midwidth){
+        @media screen and (min-width: $deskwidth){
           display: block;
         }
         ul {
@@ -396,6 +409,126 @@ body {
                     &:hover {
                       color: $color__via-grey;
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mid-size-button {
+      display: none;
+      background-color: $color__via-red;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      order: 2;
+      @media screen and (min-width: $midwidth){
+        display: block;
+      }
+      @media screen and (min-width: $deskwidth){
+        display: none;
+      }
+      &:hover {
+        background-color: $color__via-red-hover;
+      }
+    }
+  }
+  >.row-3#site-navigation-mid {
+    width: 100%;
+    order: 3;
+    border-top: 2px solid $color__via-red;
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    display: none;
+    &.toggled-mid {
+      @media screen and (min-width: $midwidth){
+        display: block;
+      }
+      @media screen and (min-width: $deskwidth){
+        display: none;
+      }
+    }
+    .menu-primary-container {
+      ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+          list-style-type: none;
+          margin: 10px 0;
+          display: block;
+          position: relative;
+          &:hover {
+            >ul.sub-menu {
+              display: block;
+            }
+          }
+          @media screen and (min-width: $midwidth){
+            display: inline-block;
+            line-height: 2.0;
+            margin: 0 20px;
+          }
+          &:last-child {
+            @media screen and (min-width: $midwidth){
+              margin-right: 0;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: $color__via-grey;
+            @media screen and (min-width: $midwidth){
+              font-size: 14px;
+              font-weight: 700;
+            }
+            &:hover {
+              color: $color__via-red;
+            }
+          } 
+          ul.sub-menu {
+            width: 100%;
+            @media screen and (min-width: $midwidth){
+              display: none;
+              background-color: rgba(255,255,255,0.9);
+              position: absolute;
+              top: 100%;
+              left: 0;
+              padding: 10px 0 0 0;
+              border-top: 4px solid $color__via-red;
+              background-image: url('./images/red-arrow.png');
+              background-repeat: no-repeat;
+              background-position: top center;
+              background-size: 20px;
+              
+            }
+            li {
+              cursor: pointer;
+              display: block;
+              line-height: 1.2;
+              padding: 10px 5px 5px 20px;
+              margin: 0;
+              &:last-child {
+                border-bottom: none;
+              }
+              &:hover {
+                background-color: white;
+              }
+              @media screen and (min-width: $midwidth){
+                border-bottom: 2px solid lightgrey;
+                text-align: left;
+              }
+              a {
+                color: $color__via-grey;
+                font-size: 16px;
+                font-weight: 500;
+                &:hover {
+                  color: $color__via-red;
+                }
+                @media screen and (min-width: $midwidth){
+                  color: $color__via-grey;
+                  &:hover {
+                    color: $color__via-grey;
                   }
                 }
               }
