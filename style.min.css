@@ -958,10 +958,11 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-about>.row-2>.row-2.team section.member>.row-1>.col-1{width:80%;padding:8px;border:1px solid #54b4b0}
 @media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1>.col-1{width:35%;float:left}
 }.template-about>.row-2>.row-2.team section.member>.row-1>.col-1 img{width:100%;display:block}
-.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:100%;padding:0 20px;margin:20px 0 0 0}
-@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:65%;margin:0;float:left}
+.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:100%;padding:0 20px;margin:20px 0 0 0;text-align:center}
+@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:65%;margin:0;float:left;text-align:left}
 }.template-about>.row-2>.row-2.team section.member>.row-1>.col-2 header h3{margin:0;color:#ea1e43;font-weight:500;font-size:30px;line-height:1}
 .template-about>.row-2>.row-2.team section.member>.row-1>.col-2 .title{font-size:20px;color:#535353}
+.template-about>.row-2>.row-2.team section.member>.row-1>.col-2 .social a{display:inline-block;color:#54b4b0;margin-right:10px;font-size:25px}
 .template-about>.row-2>.row-2.team section.member>.row-2.copy{color:black}
 .template-via-smart>.header-background-image{background-position:center;background-size:cover;padding:20% 0;min-height:300px}
 .template-via-smart>.row-1{padding:20px;text-align:center}

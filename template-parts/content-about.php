@@ -33,7 +33,9 @@
 					$i++;?>
 					<section class="member col-<?php echo $i;?> js-blocks">
 						<?php $image = get_field("image");
-						$title = get_field("title");?>
+						$title = get_field("title");
+						$linkedin = get_field("linkedin");
+						$email = get_field("email");?>
 						<div class="row-1 clear-bottom">
 							<div class="col-1">
 								<?php if($image):?>
@@ -46,6 +48,20 @@
 									<div class="title">
 										<?php echo $title;?>
 									</div><!--.title-->
+								<?php endif;?>
+								<?php if($email || $linkedin):?>
+									<div class="social">
+										<?php if($email):?>
+											<a href="<?php echo $email;?>">
+												<i class="fa-envelope fa"></i>
+											</a>
+										<?php endif;?>
+										<?php if($linkedin):?>
+											<a href="<?php echo $linkedin;?>">
+												<i class="fa fa-linkedin"></i>
+											</a>
+										<?php endif;?>
+									</div>
 								<?php endif;?>
 							</div><!--.col-2-->
 						</div><!--.row-1-->
