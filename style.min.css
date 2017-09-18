@@ -740,7 +740,8 @@ html[xmlns] .flexslider .slides{display:block}
 .copy h2{font-size:25px}
 .copy h3{font-size:20px}
 .copy ul,.copy ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
-.copy ul li,.copy ol li{margin:0 0 0 20px;font-size:inherit;padding:0;list-style-type:square}
+.copy ul li,.copy ol li{margin:0;font-size:inherit;padding:0;list-style-type:none;text-indent:-14px}
+.copy ul li:before,.copy ol li:before{content:"\25A0";color:#54b4b0;margin-right:5px}
 .copy ul li a,.copy ol li a{cursor:pointer}
 .copy ul li a:hover,.copy ol li a:hover{color:#ea1e43}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
@@ -936,9 +937,32 @@ html[xmlns] .flexslider .slides{display:block}
 .template-index>.row-3 .testimonials.flexslider ul li>.wrapper>.wrapper>.wrapper header h3{margin:0;font-weight:500;font-size:14px;color:#535353}
 .template-page,.template-sitemap,.error-404{padding:20px}
 @media screen and (min-width:900px){.template-page,.template-sitemap,.error-404{padding:8%}
-}.template-page header h1,.template-sitemap header h1,.error-404 header h1{margin:0;color:#54b4b0;font-weight:500;font-size:30px}
+}.template-page header h1,.template-sitemap header h1,.error-404 header h1{margin:0;color:#54b4b0;font-weight:500;font-size:30px;text-transform:uppercase}
 @media screen and (min-width:600px){.template-page header h1,.template-sitemap header h1,.error-404 header h1{font-size:45px}
 }.template-page .copy,.template-sitemap .copy,.error-404 .copy{margin:20px 0 0 0}
+.template-about>.row-1{padding:20px;background-color:#f5f5f5}
+@media screen and (min-width:900px){.template-about>.row-1{padding:8%}
+}.template-about>.row-1 header h1{margin:0;color:#535353;font-weight:500;font-size:30px;text-transform:uppercase}
+@media screen and (min-width:600px){.template-about>.row-1 header h1{font-size:45px}
+}.template-about>.row-1 .copy{margin:20px 0 0 0}
+.template-about>.row-2{padding:0 0 4% 0}
+.template-about>.row-2 header.row-1{padding:20px}
+@media screen and (min-width:900px){.template-about>.row-2 header.row-1{padding:8% 8% 4% 8%}
+}.template-about>.row-2 header.row-1 h2{margin:0;color:#535353;font-weight:300;font-size:25px;text-transform:uppercase;text-align:center}
+@media screen and (min-width:600px){.template-about>.row-2 header.row-1 h2{font-size:40px}
+}@media screen and (min-width:900px){.template-about>.row-2>.row-2.team{padding:0 4%}
+}.template-about>.row-2>.row-2.team section.member{width:100%;padding:20px}
+@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member{float:left;width:50%;padding:4%}
+}.template-about>.row-2>.row-2.team section.member>.row-1{padding:0 0 20px 0;margin:0 0 20px 0;border-bottom:1px dashed #535353;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1{-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+}.template-about>.row-2>.row-2.team section.member>.row-1>.col-1{width:80%;padding:8px;border:1px solid #54b4b0}
+@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1>.col-1{width:35%;float:left}
+}.template-about>.row-2>.row-2.team section.member>.row-1>.col-1 img{width:100%;display:block}
+.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:100%;padding:0 20px;margin:20px 0 0 0}
+@media screen and (min-width:600px){.template-about>.row-2>.row-2.team section.member>.row-1>.col-2{width:65%;margin:0;float:left}
+}.template-about>.row-2>.row-2.team section.member>.row-1>.col-2 header h3{margin:0;color:#ea1e43;font-weight:500;font-size:30px;line-height:1}
+.template-about>.row-2>.row-2.team section.member>.row-1>.col-2 .title{font-size:20px;color:#535353}
+.template-about>.row-2>.row-2.team section.member>.row-2.copy{color:black}
 .template-via-smart>.header-background-image{background-position:center;background-size:cover;padding:20% 0;min-height:300px}
 .template-via-smart>.row-1{padding:20px;text-align:center}
 @media screen and (min-width:600px){.template-via-smart>.row-1{padding:7% 3%}

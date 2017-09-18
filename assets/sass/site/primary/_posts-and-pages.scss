@@ -317,6 +317,7 @@
             color: $color__via-green;
             font-weight: 500;
             font-size: 30px;
+            text-transform: uppercase;
             @media screen and (min-width: $tabwidth){
                 font-size: 45px;
             }
@@ -326,6 +327,115 @@
         margin: 20px 0 0 0;
     }
 }
+.template-about {
+    >.row-1 { 
+        padding: 20px;
+        background-color: $color__via-lightest-grey;
+        @media screen and (min-width: $midwidth){
+            padding: 8%;
+        }
+        header {
+            h1 {
+                margin: 0;
+                color: $color__via-grey;
+                font-weight: 500;
+                font-size: 30px;
+                text-transform: uppercase;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 45px;
+                }
+            }
+        }
+        .copy {
+            margin: 20px 0 0 0;
+        }
+    }
+    >.row-2 {
+        padding: 0 0 4% 0;
+        header.row-1 {
+            padding: 20px;
+            @media screen and (min-width: $midwidth){
+                padding: 8% 8% 4% 8%;
+            }
+            h2 {
+                margin: 0;
+                color: $color__via-grey;
+                font-weight: 300;
+                font-size: 25px;
+                text-transform: uppercase;
+                text-align: center;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 40px;
+                }
+            }
+        }
+        >.row-2.team {
+            @media screen and (min-width: $midwidth){
+                padding: 0 4%;
+            }
+            section.member {
+                width: 100%;
+                padding: 20px;
+                @media screen and (min-width: $tabwidth){
+                    float: left;
+                    width: 50%;
+                    padding: 4%;
+                }
+                >.row-1 {
+                    padding: 0 0 20px 0;
+                    margin: 0 0 20px 0;
+                    border-bottom: 1px dashed $color__via-grey;
+                    @include flexbox();
+                    @include flexbox-align-content(center);
+                    @include flexbox-align-items(center);
+                    @include flexbox-direction(column);
+                    @media screen and (min-width: $tabwidth){
+                        @include flexbox-direction(row);
+                    }
+                    >.col-1 {
+                        width: 80%;
+                        padding: 8px;
+                        border: 1px solid $color__via-green;
+                        @media screen and (min-width: $tabwidth){
+                            width: 35%;
+                            float:left;
+                        }
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    >.col-2 {
+                        width: 100%;
+                        padding: 0 20px;
+                        margin: 20px 0 0 0;
+                        @media screen and (min-width: $tabwidth){
+                            width: 65%;
+                            margin: 0;
+                            float:left;
+                        }
+                        header {
+                            h3 {
+                                margin: 0;
+                                color: $color__via-red;
+                                font-weight: 500;
+                                font-size: 30px;
+                                line-height: 1;
+                            }
+                        }
+                        .title {
+                            font-size: 20px;
+                            color: $color__via-grey;
+                        }
+                    }
+                }
+                >.row-2.copy {
+                    color: black;
+                }
+            }
+        }
+    }
+}   
 .template-via-smart {
     >.header-background-image {
         background-position: center;
