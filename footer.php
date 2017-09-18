@@ -30,12 +30,12 @@
 				<?php $twitter_link = get_field("twitter_link","option");
 				$linkedin_link = get_field("linkedin_link","option");
 				if($twitter_link):?>
-					<a href="<?php echo $twitter_link;?>">
+					<a href="<?php echo $twitter_link;?>" target="_blank">
 						<i class="fa fa-twitter"></i>
 					</a>
 				<?php endif;
 				if($linkedin_link):?>
-					<a href="<?php echo $linkedin_link;?>">
+					<a href="<?php echo $linkedin_link;?>" target="_blank">
 						<i class="fa fa-linkedin"></i>
 					</a>
 				<?php endif;?>
