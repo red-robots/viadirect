@@ -52,7 +52,7 @@
 								<?php if($email || $linkedin):?>
 									<div class="social">
 										<?php if($email):?>
-											<a href="<?php echo $email;?>">
+											<a href="mailto:<?php echo $email;?>">
 												<i class="fa-envelope fa"></i>
 											</a>
 										<?php endif;?>
