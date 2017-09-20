@@ -148,3 +148,10 @@ function ac_first_and_last_menu_class($items) {
   return $items;
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');
+
+if(!function_exists('return_100')){
+	function return_100(){
+		return 100;
+	}
+}
+add_filter( 'jpeg_quality', 'return_100' );
