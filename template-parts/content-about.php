@@ -16,9 +16,10 @@
 			<?php the_content();?>
 		</div><!--.copy-->
 	</section><!--.section-1-->
+	<?php $header = get_field("row_2_header");?>
+	<a name="<?php echo sanitize_title_with_dashes(preg_replace('/[^0-9a-zA-Z]/'," ",$header));?>"></a>
 	<div class="row-2">
-		<?php $header = get_field("row_2_header");
-		if($header):?>
+		<?php if($header):?>
 			<header class="row-1"><h2><?php echo $header;?></h2></header>
 		<?php endif;?>
 		<?php $args = array(
