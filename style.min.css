@@ -806,7 +806,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:900px){#masthead>.row-2 #site-navigation .menu-primary-container ul li a{font-size:18px;font-weight:700}
 }#masthead>.row-2 #site-navigation .menu-primary-container ul li a:hover{color:#ea1e43}
 #masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu{width:100%}
-@media screen and (min-width:900px){#masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu{display:none;background-color:rgba(255,255,255,0.9);position:absolute;top:100%;left:0;width:150px;padding:10px 0 0 0;border-top:4px solid #ea1e43;background-image:url("./images/red-arrow.png");background-repeat:no-repeat;background-position:top center;background-size:20px}
+@media screen and (min-width:900px){#masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu{display:none;background-color:rgba(255,255,255,0.9);position:absolute;top:100%;left:0;width:200px;padding:10px 0 0 0;border-top:4px solid #ea1e43;background-image:url("./images/red-arrow.png");background-repeat:no-repeat;background-position:top center;background-size:20px}
 }#masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu li{cursor:pointer;display:block;line-height:1.2;padding:10px 5px 5px 20px;margin:0}
 #masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu li:last-child{border-bottom:0}
 #masthead>.row-2 #site-navigation .menu-primary-container ul li ul.sub-menu li:hover{background-color:white}
