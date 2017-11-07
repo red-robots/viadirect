@@ -32,8 +32,17 @@ endif;?>
 		<div class="row-1">
 			<?php wp_nav_menu( array( 'theme_location' => 'header') ); 
 			//todo insert form?>
-			<?php $request_demo_text = get_field("request_demo_text","option");
+			<?php $login_text = get_field("login_text","option");
+			$login_link = get_field("login_link","option");
+			$request_demo_text = get_field("request_demo_text","option");
 			$request_demo_link = get_field("request_demo_link","option");
+			if($login_link&&$login_text):?>
+				<div class="button login">
+					<a class="analytics cat:button label:login action:click" href="<?php echo $login_link;?>">
+						<?php echo $login_text;?>
+					</a>
+				</div><!--.button-->
+			<?php endif;
 			if($request_demo_link&&$request_demo_text):?>
 				<div class="button">
 					<a href="<?php echo $request_demo_link;?>">

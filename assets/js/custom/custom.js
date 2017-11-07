@@ -196,4 +196,51 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	//analytics integration
+	$('a.analytics').one('click',function(e){
+		e.preventDefault();
+		var placed = false;
+		function temp(){
+			if(!placed){
+				placed = true;
+				var $this = $(this);
+				if($this.attr('href')!==undefined) {
+					window.location = $this.attr('href');
+				}
+			}
+		}
+		var placeClick = temp.bind(this);
+		setTimeout(placeClick,1000);
+
+		var label_regex = new RegExp("\\blabel:\\S+\\b");
+		var cat_regex = new RegExp("\\bcat:\\S+\\b");
+		var action_regex = new RegExp("\\baction:\\S+\\b");
+		var label_matches = this.className.match(label_regex);
+		var cat_matches = this.className.match(cat_regex);
+		var action_matches = this.className.match(action_regex);
+		var label = null;
+		var cat = null;
+		var action = null;
+		if(label_matches){
+			label = label_matches[0].split(':')[1];
+		}
+		if(cat_matches){
+			cat = cat_matches[0].split(':')[1];
+		}
+		if(action_matches){
+			action = action_matches[0].split(':')[1];
+		}
+		if(cat||label||action){
+			ga('send', {
+				hitType: 'event',
+				hitCallback: function(){
+					placeClick();
+				},
+				eventCategory: cat,
+				eventAction: action,
+				eventLabel: label,
+				eventValue: null
+			});
+		}
+	});
 });// END #####################################    END
