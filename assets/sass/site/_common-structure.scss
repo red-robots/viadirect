@@ -87,7 +87,6 @@ body {
   padding: 0;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0 .5px 30px black;
-  max-height: 100vh;
   @include flexbox();
   @include flexbox-direction(column);
   @include flexbox-align-content(flex-start);
