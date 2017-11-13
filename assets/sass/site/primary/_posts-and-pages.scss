@@ -334,25 +334,27 @@
         @media screen and (min-width: $midwidth){
             padding: 8%;
         }
-        >header {
-            margin: 0 0 20px 0;
-            h1 {
-                margin: 0;
-                color: $color__via-grey;
-                font-weight: 500;
-                font-size: 30px;
-                text-transform: uppercase;
+        >.copy.col-1 {
+            &.two-col {
                 @media screen and (min-width: $tabwidth){
-                    font-size: 45px;
+                    float: left;
+                    width: 50%;
+                    min-height: 1px;
+                    padding: 0 4.76% 0 0;
                 }
             }
-        }
-        >.copy.col-1 {
-            @media screen and (min-width: $tabwidth){
-                float: left;
-                width: 50%;
-                min-height: 1px;
-                padding: 0 4.76% 0 0;
+            >header {
+                margin: 0 0 20px 0;
+                h1 {
+                    margin: 0;
+                    color: $color__via-grey;
+                    font-weight: 500;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 45px;
+                    }
+                }
             }
         }
         >.col-2 {
@@ -363,6 +365,19 @@
                 margin: 0;
                 min-height: 1px;
                 padding: 0 0 0 4.76%;
+            }
+            >header {
+                margin: 0 0 20px 0;
+                h2 {
+                    margin: 0;
+                    color: $color__via-grey;
+                    font-weight: 500;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 45px;
+                    }
+                }
             }
             .event {
                 background-color: white;

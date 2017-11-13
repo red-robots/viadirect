@@ -11,37 +11,41 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-about"); ?>>
 	<section class="row-1 clear-bottom">
-		<header><h1><?php the_title();?></h1></header>
-		<div class="col-1 copy">
+		<?php $today = date('Ymd');
+		$args = array(
+			'post_type'=>'event',
+			'posts_per_page'=>-1,
+			'order'=>'ASC',
+			'orderby'=>'date',
+			'meta_query' => array(
+				'relation' => 'OR',
+				array(
+					'key' => 'date',
+					'value' => $today,
+					'compare' => '>'
+				),
+				array(
+					'key' => 'date',
+					'value' => '',
+					'compare' => '='
+				),
+				array(
+					'key' => 'date',
+					'compare' => 'NOT EXISTS'
+				),
+			)
+		);
+		$query = new WP_Query($args);?>
+		<div class="col-1 copy <?php if($query->have_posts()) echo "two-col";?>">
+			<header><h1><?php the_title();?></h1></header>
 			<?php the_content();?>
 		</div><!--.col-1-->
-		<div class="col-2">
-			<?php $today = date('Ymd');
-			$args = array(
-				'post_type'=>'event',
-				'posts_per_page'=>-1,
-				'order'=>'ASC',
-				'orderby'=>'date',
-				'meta_query' => array(
-					'relation' => 'OR',
-					array(
-						'key' => 'date',
-						'value' => $today,
-						'compare' => '>'
-					),
-					array(
-						'key' => 'date',
-						'value' => '',
-						'compare' => '='
-					),
-					array(
-						'key' => 'date',
-						'compare' => 'NOT EXISTS'
-					),
-				)
-			);
-			$query = new WP_Query($args);
-			if($query->have_posts()):?>
+		<?php if($query->have_posts()):?>
+			<div class="col-2">
+				<?php $events_title = get_field("events_title");
+				if($events_title):?>
+					<header><h2><?php echo $events_title;?></h2></header>
+				<?php endif;?>
 				<?php while($query->have_posts()):$query->the_post();?>
 					<div class="event">
 						<div class="row-1 clear-bottom">
@@ -69,8 +73,8 @@
 						</div><!--.row-2-->				
 					</div><!--.event-->
 				<?php endwhile;?>
-			<?php endif;?>
-		</div><!--.col-2-->
+			</div><!--.col-2-->
+		<?php endif;?>
 	</section><!--.section-1-->
 	<?php $header = get_field("row_2_header");?>
 	<a name="<?php echo sanitize_title_with_dashes(preg_replace('/[^0-9a-zA-Z]/'," ",$header));?>"></a>
