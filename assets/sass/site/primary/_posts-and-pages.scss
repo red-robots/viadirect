@@ -309,7 +309,7 @@
 .template-page, .template-sitemap, .error-404 {
     padding: 20px;
     @media screen and (min-width: $midwidth){
-        padding: 8%;
+        padding: 16.5% 8% 8% 8%;
     }
     header {
         h1 {
@@ -328,6 +328,9 @@
     }
 }
 .template-about {
+    @media screen and (min-width: $midwidth){
+        padding: 8.5% 0 0 0;
+    }
     >.row-1 { 
         padding: 20px;
         background-color: $color__via-lightest-grey;

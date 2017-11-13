@@ -76,25 +76,9 @@
   }
 }
 body {
-  &.page-id-104, &.page-id-106 {
-    #masthead {
-      @media screen and (min-width: $midwidth){
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 20;
-      }
-    }
-  }
   &.home {
     #masthead {
       box-shadow: none;
-      @media screen and (min-width: $midwidth){
-        z-index: 20;
-        top: 0;
-        left: 0;
-        position: fixed;
-      }
     }
   }
 }
@@ -111,6 +95,10 @@ body {
   @include flexbox-justify(flex-start);
   @media screen and (min-width: $midwidth){
     padding: 10px 3% 30px 3%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    position: fixed;
   }
   >.mobile {
     background-color: $color__via-gold;
