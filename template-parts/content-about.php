@@ -10,11 +10,67 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-about"); ?>>
-	<section class="row-1">
+	<section class="row-1 clear-bottom">
 		<header><h1><?php the_title();?></h1></header>
-		<div class="copy">
+		<div class="col-1 copy">
 			<?php the_content();?>
-		</div><!--.copy-->
+		</div><!--.col-1-->
+		<div class="col-2">
+			<?php $today = date('Ymd');
+			$args = array(
+				'post_type'=>'event',
+				'posts_per_page'=>-1,
+				'order'=>'ASC',
+				'orderby'=>'date',
+				'meta_query' => array(
+					'relation' => 'OR',
+					array(
+						'key' => 'date',
+						'value' => $today,
+						'compare' => '>'
+					),
+					array(
+						'key' => 'date',
+						'value' => '',
+						'compare' => '='
+					),
+					array(
+						'key' => 'date',
+						'compare' => 'NOT EXISTS'
+					),
+				)
+			);
+			$query = new WP_Query($args);
+			if($query->have_posts()):?>
+				<?php while($query->have_posts()):$query->the_post();?>
+					<div class="event">
+						<div class="row-1 clear-bottom">
+							<header><h2><?php the_title();?></h2></header>
+							<?php $date = get_field("date");
+							if($date):?>
+								<div class="date">
+									<?php echo $date;?>
+								</div><!--.date-->
+							<?php endif;?>
+						</div><!--.row-1-->
+						<div class="row-2 clear-bottom">
+							<div class="col-1 copy js-blocks">
+								<?php the_content();?>
+							</div><!--.col-1-->
+							<div class="col-2 js-blocks">
+								<?php $learn_more_link = get_field("learn_more_link");
+								$learn_more_text = get_field("learn_more_text");
+								if($learn_more_link&&$learn_more_text):?>
+									<a href="<?php echo $learn_more_link;?>">
+										<?php echo $learn_more_text;?>
+									</a>
+								<?php endif;?>
+							</div><!--.col-2-->
+						</div><!--.row-2-->				
+					</div><!--.event-->
+				<?php endwhile;?>
+			<?php endif;?>
+		</div><!--.col-2-->
 	</section><!--.section-1-->
 	<?php $header = get_field("row_2_header");?>
 	<a name="<?php echo sanitize_title_with_dashes(preg_replace('/[^0-9a-zA-Z]/'," ",$header));?>"></a>
