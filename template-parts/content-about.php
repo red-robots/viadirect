@@ -20,17 +20,17 @@
 			'meta_query' => array(
 				'relation' => 'OR',
 				array(
-					'key' => 'date',
+					'key' => 'expiration_date',
 					'value' => $today,
 					'compare' => '>'
 				),
 				array(
-					'key' => 'date',
+					'key' => 'expiration_date',
 					'value' => '',
 					'compare' => '='
 				),
 				array(
-					'key' => 'date',
+					'key' => 'expiration_date',
 					'compare' => 'NOT EXISTS'
 				),
 			)
