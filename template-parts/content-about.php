@@ -77,7 +77,7 @@
 		<?php endif;?>
 	</section><!--.section-1-->
 	<?php $header = get_field("row_2_header");?>
-	<a name="<?php echo sanitize_title_with_dashes(preg_replace('/[^0-9a-zA-Z]/'," ",$header));?>"></a>
+	<a name="company-leadership"></a>
 	<div class="row-2">
 		<?php if($header):?>
 			<header class="row-1"><h2><?php echo $header;?></h2></header>
