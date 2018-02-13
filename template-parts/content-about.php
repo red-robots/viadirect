@@ -65,7 +65,7 @@
 								<?php $learn_more_link = get_field("learn_more_link");
 								$learn_more_text = get_field("learn_more_text");
 								if($learn_more_link&&$learn_more_text):?>
-									<a href="<?php echo $learn_more_link;?>">
+									<a href="<?php echo $learn_more_link;?>" target="_blank">
 										<?php echo $learn_more_text;?>
 									</a>
 								<?php endif;?>
