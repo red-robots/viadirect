@@ -48,7 +48,7 @@
   h3 {
     font-size: 20px;
   }
-  ul:not(.gform_fields), ol:not(.gform_fields) {
+  ul, ol {
     padding: 0;
     margin: 0 0 20px 20px;
     font-size: inherit;
@@ -74,6 +74,9 @@
       }
     }
   }
+}
+.gform_body ul li {
+  text-indent: 0 !important;
 }
 body {
   &.home {
